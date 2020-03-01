@@ -1,0 +1,150 @@
+<div id="slider">
+  <div class="arrow_left"><img src="/assets/images/layout/arrow_left_50x50.gif" alt="" title=""/></div>
+  <div class="bottom_shadow"></div>
+
+  <div class="slider">
+    <div class="slide"
+         style="background: url(http://www.filmy.pl/cache/19184.48034.h200.w840.jpg) top center no-repeat;">
+      <div class="text_in right">
+        <a class="title" href="http://www.filmy.pl/film/951/dziennik-zakrapiany-rumem/"
+           title="Dziennik zakrapiany rumem">Dziennik zakrapiany rumem</a>
+        <div class="text c_ffffff" style="color: #fff">Paul Kemp porzuca nowojorski hałas na rzecz błogiego
+          spokoju wyspy Portoryko i przyjmuje posadę w lokalnej gazecie. Umilając sobie czas pokaźnymi dawkami
+          rumu, Paul poznaje i błyskawicznie traci głowę dla zmysłowej Chenault...
+        </div>
+      </div>
+      <div class="clear"></div>
+      <a class="a_270x30 right" href="http://www.filmy.pl/film/951/dziennik-zakrapiany-rumem/media/"
+         title="Dziennik zakrapiany rumem"><img
+        src="/assets/images/layout/button_look_trailer_270x30.gif" alt="Dziennik zakrapiany rumem"
+        title="Dziennik zakrapiany rumem"/></a></div>
+    <div class="slide"
+         style="background: url(http://www.filmy.pl/cache/19183.b1f9f.h200.w840.jpg) top center no-repeat;">
+      <div class="text_in left">
+        <a class="title" href="http://www.filmy.pl/film/952/cokolwiek-sie-zdarzy/" title="Cokolwiek się zdarzy">Cokolwiek
+          się zdarzy</a>
+        <div class="text c_ffffff" style="color: #fff">Alex jest scenarzystą. Pracuje nad osobistym tekstem:
+          historią o weekendzie z bardzo klarownie wyznaczonym celem. Będzie kochał się ze swoją żoną cztery
+          razy. Nie zmieni ani jednej linijki tekstu? Jak to ma się do rzeczywistości?
+        </div>
+      </div>
+      <div class="clear"></div>
+      <a class="a_270x30 left" href="http://www.filmy.pl/film/952/cokolwiek-sie-zdarzy/media/"
+         title="Cokolwiek się zdarzy"><img src="/assets/images/layout/button_look_trailer_270x30.gif"
+                                           alt="Cokolwiek się zdarzy" title="Cokolwiek się zdarzy"/></a></div>
+    <div class="slide"
+         style="background: url(http://www.filmy.pl/cache/19180.d2489.h200.w840.jpg) top center no-repeat;">
+      <div class="text_in right">
+        <a class="title" href="http://www.filmy.pl/film/947/lowca-trolli/" title="Łowca trolli">Łowca trolli</a>
+        <div class="text c_ffffff" style="color: #fff">Hans to tajemniczy jegomość z brodą niczym Rumcajs,
+          samotnie wędrujący po lasach i ostępach Norwegii. Pozornie jest kłusownikiem polującym na
+          niedźwiedzie. Prawda jest jednak inna - Hans poluje na... trolle!
+        </div>
+      </div>
+      <div class="clear"></div>
+      <a class="a_270x30 right" href="http://www.filmy.pl/film/947/lowca-trolli/media/" title="Łowca trolli"><img
+        src="/assets/images/layout/button_look_trailer_270x30.gif" alt="Łowca trolli"
+        title="Łowca trolli"/></a></div>
+    <div class="slide"
+         style="background: url(http://www.filmy.pl/cache/19178.a1000.h200.w840.jpg) top center no-repeat;">
+      <div class="text_in left">
+        <a class="title" href="http://www.filmy.pl/film/949/mission-impossible-ghost-protocol/"
+           title="Mission Impossible: Ghost...">Mission Impossible: Ghost...</a>
+        <div class="text c_ffffff" style="color: #fff">Oskarżony o zamach bombowy na Kreml, agent Ethan Hunt z
+          resztą zespołu zostaje zwolniony z obowiązków. Pozostawiony bez środków i wsparcia, Ethan musi
+          znaleźć sposób na oczyszczenie dobrego imienia agencji...
+        </div>
+      </div>
+      <div class="clear"></div>
+      <a class="a_270x30 left" href="http://www.filmy.pl/film/949/mission-impossible-ghost-protocol/media/"
+         title="Mission Impossible: Ghost..."><img
+        src="/assets/images/layout/button_look_trailer_270x30.gif"
+        alt="Mission Impossible: Ghost..." title="Mission Impossible: Ghost..."/></a></div>
+    <div class="slide"
+         style="background: url(http://www.filmy.pl/cache/19179.5235c.h200.w840.jpg) top center no-repeat;">
+      <div class="text_in left">
+        <a class="title" href="http://www.filmy.pl/film/950/chciwosc/" title="Chciwość">Chciwość</a>
+        <div class="text c_ffffff" style="color: #fff">Pierwsze 24 godziny finansowego kryzysu na Wall Street.
+          Kulisy wydarzeń, które zmieniły cały świat. Analityk pracujący firmy z Wall Street, odkrywa
+          niepokojące dane, które wskazują na nieprawidłowości finansowe..
+        </div>
+      </div>
+      <div class="clear"></div>
+      <a class="a_270x30 left" href="http://www.filmy.pl/film/950/chciwosc/media/" title="Chciwość"><img
+        src="/assets/images/layout/button_look_trailer_270x30.gif" alt="Chciwość" title="Chciwość"/></a>
+    </div>
+  </div>
+
+  <div class="arrow_right"><img src="/assets/images/layout/arrow_right_50x50.gif" alt="" title=""/></div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+
+  $().ready(function () {
+    $("#whatSearch").change(function () {
+      var whatSearch = $("#whatSearch :selected").val();
+
+      if (whatSearch == 'films') {
+        $("form#searchForm").attr('name', 'searchFilms');
+        $("form#searchForm #hiddenWhatSearch").attr('value', 'films');
+        $("form#searchForm #bonusSearchFilms").show();
+        $("form#searchForm #bonusSearchPersons").hide();
+        $("form#searchForm #bonusSearchUsers").hide();
+      }
+
+      if (whatSearch == 'persons') {
+        $("form#searchForm").attr('name', 'searchPersons');
+        $("form#searchForm #hiddenWhatSearch").attr('value', 'persons');
+        $("form#searchForm #bonusSearchFilms").hide();
+        $("form#searchForm #bonusSearchPersons").show();
+        $("form#searchForm #bonusSearchUsers").hide();
+      }
+
+      if (whatSearch == 'forums') {
+        $("form#searchForm").attr('name', 'searchForums');
+        $("form#searchForm #hiddenWhatSearch").attr('value', 'forums');
+        $("form#searchForm #bonusSearchFilms").hide();
+        $("form#searchForm #bonusSearchPersons").hide();
+        $("form#searchForm #bonusSearchUsers").hide();
+      }
+
+      if (whatSearch == 'users') {
+        $("form#searchForm").attr('name', 'searchUsers');
+        $("form#searchForm #hiddenWhatSearch").attr('value', 'users');
+        $("form#searchForm #bonusSearchFilms").hide();
+        $("form#searchForm #bonusSearchPersons").hide();
+        $("form#searchForm #bonusSearchUsers").show();
+      }
+
+      if (whatSearch == 'articles') {
+        $("form#searchForm").attr('name', 'searchArticles');
+        $("form#searchForm #hiddenWhatSearch").attr('value', 'articles');
+        $("form#searchForm #bonusSearchFilms").hide();
+        $("form#searchForm #bonusSearchPersons").hide();
+        $("form#searchForm #bonusSearchUsers").hide();
+      }
+
+    });
+
+    $("#searchSortFilmsFilter, #searchSortFilmsFilterDesc").change(function () {
+      document.searchFilms.submit();
+    });
+
+    $("#searchSortPersonsFilter, #searchSortPersonsFilterDesc").change(function () {
+      document.searchPersons.submit();
+    });
+
+    $("#searchSortForumsFilter, #searchSortForumsFilterDesc").change(function () {
+      document.searchForums.submit();
+    });
+
+    $("#searchSortUsersFilter, #searchSortUsersFilterDesc").change(function () {
+      document.searchUsers.submit();
+    });
+
+    $("#searchSortArticlesFilter, #searchSortArticlesFilterDesc").change(function () {
+      document.searchArticles.submit();
+    });
+  });
+
+</script>

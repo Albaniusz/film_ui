@@ -1,0 +1,113 @@
+<div id="twobox">
+  <div id="top" class="b_e2e2e2 fc_4c4c4c">
+    <div class="top_box">
+      <div class="div_buttons">
+        <p class="notclick">Top 10</p>
+        <a href="javascript:void(0);" class="selected" id="topten">Filmy</a>
+        <a href="javascript:void(0);" id="cinema">Ludzie</a>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="topten">
+      <div id="top10dvdbl" class="accordion">
+        <ng-container *ngFor="let film of films">
+          <h3 class="bc_ffffff">1. {{film.title}}</h3>
+          <div class="bc_ffffff accFirst">
+            <div class="col_1">
+              <div class="stills stills_5" title="Średnia 5.00, przy ilości głosów 1"></div>
+              <div class="genre">Gatunek: {{film.genres}}</div>
+              <div class="production">Produkcja: {{film.countries}}</div>
+              <div class="trailer"><a href="/film/{{film.id}}/dziecinstwo-ikara/media/"
+                                      title="Zobacz zwiastun">Zobacz zwiastun</a></div>
+              <div class="comments"></div>
+            </div>
+            <div class="col_3">
+              <a href="/film/{{film.id}}/dziecinstwo-ikara/" title="{{film.title}}"><img
+                class="poster b_e2e2e2" src="/cache/18846.f8bef.h69.w48.jpg" alt="{{film.title}}"
+                title="{{film.title}}"/></a>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="cinema">
+      <div id="top10cinema" class="accordion">
+
+        <div *ngFor="let person of persons">
+          <h3 class="bc_ffffff">1. {{person.name}}</h3>
+          <div class="bc_ffffff accFirst">
+            <div class="col_1">
+              <div class="stills stills_5" title="Średnia 5.00, przy ilości głosów 5"></div>
+              <div class="genre"></div>
+            </div>
+            <div class="col_2">
+              <div class="comments"></div>
+            </div>
+            <div class="col_3">
+              <a href="/osoba/person.id/adam-sandler/" title="person.name"><img class="poster b_e2e2e2"
+                                                                                src="/cache/15136.31882.h69.w48.jpg"
+                                                                                alt="person.name"
+                                                                                title="person.name"/></a>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="reviews" class="b_e2e2e2 fc_4c4c4c">
+    <div class="top_box">
+      <div class="div_buttons">
+        <a href="javascript:void(0);" id="revcin" class="selected">Recenzje Kinowe</a>
+        <a href="javascript:void(0);" id="newfor">Nowe na forum</a>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="revcin">
+      <div id="cinemareviews" class="accordion">
+
+        <div *ngFor="let review of reviews">
+          <h3 class="bc_ffffff"><img src="/assets/images/layout/icon_paper_10x10.gif" alt="" title=""
+                                     style="padding-right: 6px;"/>Chciwość</h3>
+          <div class="bc_ffffff accFirst">
+            <div class="col_1">
+              <div class="stills stills_0"></div>
+              <div class="text">
+
+                <strong><a href="/film/950/chciwosc/recenzje/1657/trybiki-w-machinie/"
+                           title="Trybiki w machinie">Trybiki w machinie</a></strong><br/>
+                Film J.C. Chandora nie wysila się na tłumaczenie schemat&oacute;w trwającego kryzysu, skupiając się
+                na...
+
+              </div>
+            </div>
+            <div class="col_2">
+              <a href="/film/950/chciwosc/" title="Chciwość"><img class="poster b_e2e2e2"
+                                                                                     src="http://www.filmy.pl/cache/19138.b2b5c.h69.w48.jpg"
+                                                                                     alt="Chciwość"
+                                                                                     title="Chciwość"/></a>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="newfor" style="display:none;">
+      <div id="newforum">
+
+        <div class="bc_ffffff" *ngFor="let forumThread of forumThreads">
+          <img src="/assets/images/layout/icon_paper_10x10.gif" alt="" title=""
+               style="padding-right:6px;"/> <a
+          href="/forum/1/film/185/boso-ale-na-rowerze-2009/#p116982">Boso, ale na rowerze
+          (2009)</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
