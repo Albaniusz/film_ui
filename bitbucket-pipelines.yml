@@ -1,0 +1,25 @@
+image: node:10.15.3
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script: # Modify the commands below to build your repository.
+          - npm install
+          - npm test
+    - step:
+        name: Create artifact UI
+        script:
+          - tar czfv ui.tgz e2e/ src/ angular.json browserslist karma.conf.js package.json package-lock.json README.md tsconfig.app.json tsconfig.json tsconfig.spec.json tslint.json
+        artifacts:
+          - service.tgz
+    - step:
+        name: Deploy ui to staging
+        deployment: staging
+        script:
+          - pipe: atlassian/heroku-deploy:0.1.1
+            variables:
+              HEROKU_APP_NAME: $HEROKU_APP_NAME
+              HEROKU_API_KEY: $HEROKU_API_KEY
+              ZIP_FILE: "ui.tgz"
