@@ -13,7 +13,7 @@ pipelines:
         script:
           - tar czfv ui.tgz e2e/ src/ angular.json browserslist karma.conf.js package.json package-lock.json README.md tsconfig.app.json tsconfig.json tsconfig.spec.json tslint.json
         artifacts:
-          - service.tgz
+          - ui.tgz
     - step:
         name: Deploy ui to staging
         deployment: staging
