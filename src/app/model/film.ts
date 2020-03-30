@@ -8,16 +8,11 @@ export interface Film {
   id: number;
   title: string;
   titleOriginal: string;
-
   yearOfProduction: number;
   duration: number;
-
   genres: Genre[];
   countries: Country[];
-
   premiereDates: Premieredate[];
-
   distributionInPoland: Distributor[];
-
   mainSummary: Summary;
 }

@@ -1,132 +1,44 @@
 <div id="news" class="b_e2e2e2 fc_4c4c4c">
   <div class="top_box">
-    <div class="div_title"><h1 style="float: left;">Aktualności &nbsp;</h1> <span class="fc_005181"><h1 style="float: left;">filmowe</h1></span><div class="clear"> </div></div>
-    <div class="clear"> </div>
+    <div class="div_title"><h1 style="float: left;">Aktualności &nbsp;</h1> <span class="fc_005181"><h1
+      style="float: left;">filmowe</h1></span>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
   </div>
-  <div >
+  <div>
     <div id="actualnews" class="accordion">
-      <h2 class="bc_ffffff hFirst">
-        <img src="/assets/images/layout/icon_paper2_10x10.gif" alt="Ginnifer Goodwin nie będzie królową..." title="Ginnifer Goodwin nie będzie królową..." style="padding-right: 6px;"/>
-        Ginnifer Goodwin nie będzie królową...
-      </h2>
 
-      <div class="bc_ffffff accFirst">
-        <div class="col_1 left">
-          <a href="/nowosci/aktualnosci/ginnifer-goodwin-nie-bedzie-krolowa-komedii/"><img class="poster b_777777" src="/cache/18676.c8e89.h43.w58.jpg" alt="" title=""/></a>
-        </div>
-        <div class="col_2 left">
-          <div class="text">
-            <a href="/nowosci/aktualnosci/ginnifer-goodwin-nie-bedzie-krolowa-komedii/">Ginnifer Goodwin boi się zaszufladkowania.</a> [<span class="more_0 fc_45a2d7" style="cursor: pointer;" onclick="window.location.href = '/nowosci/aktualnosci/ginnifer-goodwin-nie-bedzie-krolowa-komedii/';"> więcej </span>]
-          </div>
-        </div>
-        <div class="clear"> </div>
-      </div>
-      <h2 class="bc_f1f1f1 hOther">
-        <img src="/assets/images/layout/icon_paper2_10x10.gif" alt="John Cleese wyda wspomnienia" title="John Cleese wyda wspomnienia" style="padding-right: 6px;"/>
-        John Cleese wyda wspomnienia
-      </h2>
+<!--      <mat-accordion>-->
 
-      <div class="bc_f1f1f1 accOther">
-        <div class="col_1 left">
-          <a href="/nowosci/aktualnosci/john-cleese-wyda-wspomnienia/"><img class="poster b_777777" src="/cache/18675.b633f.h43.w58.jpg" alt="" title=""/></a>
-        </div>
-        <div class="col_2 left">
-          <div class="text">
-            <a href="/nowosci/aktualnosci/john-cleese-wyda-wspomnienia/">John Cleese zamierza spisać swoje wspomnienia.</a> [<span class="more_1 fc_45a2d7" style="cursor: pointer;" onclick="window.location.href = '/nowosci/aktualnosci/john-cleese-wyda-wspomnienia/';"> więcej </span>]
-          </div>
-        </div>
-        <div class="clear"> </div>
-      </div>
-      <h2 class="bc_ffffff hOther">
-        <img src="/assets/images/layout/icon_paper2_10x10.gif" alt="Natalie Portman chwali Chrisa Hemswortha" title="Natalie Portman chwali Chrisa Hemswortha" style="padding-right: 6px;"/>
-        Natalie Portman chwali Chrisa Hemswortha
-      </h2>
+        <ng-container *ngFor="let newsItem of news">
+<!--          <mat-expansion-panel>-->
+<!--            <mat-expansion-panel-header>-->
+              <h2 class="bc_ffffff hFirst">
+                <img src="/assets/images/layout/icon_paper2_10x10.gif" alt="{{newsItem.title}}..."
+                     title="{{newsItem.title}}..." style="padding-right: 6px;"/>
+                {{newsItem.title}}...
+              </h2>
+<!--            </mat-expansion-panel-header>-->
+            <div class="bc_ffffff accFirst">
+              <div class="col_1 left">
+                <a href="{{newsItem.link}}"><img class="poster b_777777" src="http://www.filmy.pl{{newsItem.poster}}"
+                                                 alt="{{newsItem.title}}"
+                                                 title="{{newsItem.title}}"/></a>
+              </div>
+              <div class="col_2 left">
+                <div class="text">
+                  <a href="{{newsItem.link}}">{{newsItem.summary}}</a> [<span class="more_0 fc_45a2d7"
+                                                                              style="cursor: pointer;"> więcej </span>]
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+<!--          </mat-expansion-panel>-->
+        </ng-container>
 
-      <div class="bc_ffffff accOther">
-        <div class="col_1 left">
-          <a href="/nowosci/aktualnosci/natalie-portman-chwali-chrisa-hemswortha/"><img class="poster b_777777" src="/cache/18674.1fe6a.h43.w58.jpg" alt="" title=""/></a>
-        </div>
-        <div class="col_2 left">
-          <div class="text">
-            <a href="/nowosci/aktualnosci/natalie-portman-chwali-chrisa-hemswortha/">Natalie Portman nie szczędzi słów pochwał koledze z planu filmu "Thor", Chrisowi Hemsworthowi.</a> [<span class="more_2 fc_45a2d7" style="cursor: pointer;" onclick="window.location.href = '/nowosci/aktualnosci/natalie-portman-chwali-chrisa-hemswortha/';"> więcej </span>]
-          </div>
-        </div>
-        <div class="clear"> </div>
-      </div>
-      <h2 class="bc_f1f1f1 hOther">
-        <img src="/assets/images/layout/icon_paper2_10x10.gif" alt="Tonto Johnny'ego Deppa nie będzie..." title="Tonto Johnny'ego Deppa nie będzie..." style="padding-right: 6px;"/>
-        Tonto Johnny'ego Deppa nie będzie...
-      </h2>
+<!--      </mat-accordion>-->
 
-      <div class="bc_f1f1f1 accOther">
-        <div class="col_1 left">
-          <a href="/nowosci/aktualnosci/tonto-johnnyego-deppa-nie-bedzie-sluzacym/"><img class="poster b_777777" src="/cache/18673.55008.h43.w58.jpg" alt="" title=""/></a>
-        </div>
-        <div class="col_2 left">
-          <div class="text">
-            <a href="/nowosci/aktualnosci/tonto-johnnyego-deppa-nie-bedzie-sluzacym/">Johnny Depp zapowiedział, że w nowej wersji filmu "The Lone Ranger" odgrywana przez niego postać, Tonto, nie będzie przypominała tej z...</a> [<span class="more_3 fc_45a2d7" style="cursor: pointer;" onclick="window.location.href = '/nowosci/aktualnosci/tonto-johnnyego-deppa-nie-bedzie-sluzacym/';"> więcej </span>]
-          </div>
-        </div>
-        <div class="clear"> </div>
-      </div>
-      <h2 class="bc_ffffff hOther">
-        <img src="/assets/images/layout/icon_paper2_10x10.gif" alt="Nick Frost chce na poważnie" title="Nick Frost chce na poważnie" style="padding-right: 6px;"/>
-        Nick Frost chce na poważnie
-      </h2>
-
-      <div class="bc_ffffff accOther">
-        <div class="col_3">
-          <div class="text">
-            <a href="/nowosci/aktualnosci/nick-frost-chce-na-powaznie/">Nick Frost marzy o nieco poważniejszych rolach filmowych.</a> [<span class="more_4 fc_45a2d7" style="cursor: pointer;" onclick="window.location.href = '/nowosci/aktualnosci/nick-frost-chce-na-powaznie/';"> więcej </span>]
-          </div>
-        </div>
-        <div class="clear"> </div>
-      </div>
-      <h2 class="bc_f1f1f1 hOther">
-        <img src="/assets/images/layout/icon_paper2_10x10.gif" alt="Harrison Ford: Kino straciło duszę" title="Harrison Ford: Kino straciło duszę" style="padding-right: 6px;"/>
-        Harrison Ford: Kino straciło duszę
-      </h2>
-
-      <div class="bc_f1f1f1 accOther">
-        <div class="col_1 left">
-          <a href="/nowosci/aktualnosci/harrison-ford-kino-stracilo-dusze/"><img class="poster b_777777" src="/cache/18672.435e4.h43.w58.jpg" alt="" title=""/></a>
-        </div>
-        <div class="col_2 left">
-          <div class="text">
-            <a href="/nowosci/aktualnosci/harrison-ford-kino-stracilo-dusze/">Harrison Ford twierdzi, że nowoczesne filmy akcji są "bezduszne".</a> [<span class="more_5 fc_45a2d7" style="cursor: pointer;" onclick="window.location.href = '/nowosci/aktualnosci/harrison-ford-kino-stracilo-dusze/';"> więcej </span>]
-          </div>
-        </div>
-        <div class="clear"> </div>
-      </div>
-      <h2 class="bc_ffffff hOther">
-        <img src="/assets/images/layout/icon_paper2_10x10.gif" alt="'Tarzan' w rękach dwóch scenarzystów" title="'Tarzan' w rękach dwóch scenarzystów" style="padding-right: 6px;"/>
-        "Tarzan" w rękach dwóch scenarzystów
-      </h2>
-
-      <div class="bc_ffffff accOther">
-        <div class="col_3">
-          <div class="text">
-            <a href="/nowosci/aktualnosci/tarzan-w-rekach-dwoch-scenarzystow/">Studio Warner Bros. planuje realizację dwóch filmów o Tarzanie.</a> [<span class="more_6 fc_45a2d7" style="cursor: pointer;" onclick="window.location.href = '/nowosci/aktualnosci/tarzan-w-rekach-dwoch-scenarzystow/';"> więcej </span>]
-          </div>
-        </div>
-        <div class="clear"> </div>
-      </div>
-      <h2 class="bc_f1f1f1 hOther">
-        <img src="/assets/images/layout/icon_paper2_10x10.gif" alt="Amerykanie pokochali kolejnego..." title="Amerykanie pokochali kolejnego..." style="padding-right: 6px;"/>
-        Amerykanie pokochali kolejnego...
-      </h2>
-
-      <div class="bc_f1f1f1 accOther">
-        <div class="col_1 left">
-          <a href="/nowosci/aktualnosci/amerykanie-pokochali-kolejnego-superbohatera/"><img class="poster b_777777" src="/cache/18671.00864.h43.w58.jpg" alt="" title=""/></a>
-        </div>
-        <div class="col_2 left">
-          <div class="text">
-            <a href="/nowosci/aktualnosci/amerykanie-pokochali-kolejnego-superbohatera/">Ekranizacja komiksu Marvela, "Thor", zadebiutowała na szczycie amerykańskiego box office'u. </a> [<span class="more_7 fc_45a2d7" style="cursor: pointer;" onclick="window.location.href = '/nowosci/aktualnosci/amerykanie-pokochali-kolejnego-superbohatera/';"> więcej </span>]
-          </div>
-        </div>
-        <div class="clear"></div>
-      </div>
     </div>
   </div>
 </div>

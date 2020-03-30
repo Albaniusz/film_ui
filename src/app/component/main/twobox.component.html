@@ -1,5 +1,6 @@
 <div id="twobox">
   <div id="top" class="b_e2e2e2 fc_4c4c4c">
+
     <div class="top_box">
       <div class="div_buttons">
         <p class="notclick">Top 10</p>
@@ -11,32 +12,52 @@
     </div>
     <div class="topten">
       <div id="top10dvdbl" class="accordion">
+
+        <!--        <mat-accordion hideToggle displayMode="flat">-->
+
         <ng-container *ngFor="let film of films">
+          <!--            <mat-expansion-panel class="">-->
+          <!--              <mat-expansion-panel-header class="">-->
           <h3 class="bc_ffffff">1. {{film.title}}</h3>
+          <!--              </mat-expansion-panel-header>-->
           <div class="bc_ffffff accFirst">
             <div class="col_1">
               <div class="stills stills_5" title="Średnia 5.00, przy ilości głosów 1"></div>
-              <div class="genre">Gatunek: {{film.genres}}</div>
-              <div class="production">Produkcja: {{film.countries}}</div>
-              <div class="trailer"><a href="/film/{{film.id}}/dziecinstwo-ikara/media/"
+              <div class="genre">Gatunek:
+                <ng-container *ngFor="let genre of film.genres">{{genre.name}},</ng-container>
+              </div>
+              <div class="production">Produkcja:
+                <ng-container *ngFor="let country of film.countries">{{country.name}},</ng-container>
+              </div>
+              <div class="trailer"><a href="{{film.id}}/dziecinstwo-ikara/media/"
                                       title="Zobacz zwiastun">Zobacz zwiastun</a></div>
               <div class="comments"></div>
             </div>
             <div class="col_3">
               <a href="/film/{{film.id}}/dziecinstwo-ikara/" title="{{film.title}}"><img
-                class="poster b_e2e2e2" src="/cache/18846.f8bef.h69.w48.jpg" alt="{{film.title}}"
+                class="poster b_e2e2e2" src="/assets/images/layout/defaultPoster_48x69.jpg" alt="{{film.title}}"
                 title="{{film.title}}"/></a>
             </div>
             <div class="clear"></div>
           </div>
+          <!--            </mat-expansion-panel>-->
         </ng-container>
+
+
+        <!--        </mat-accordion>-->
+
+
       </div>
     </div>
     <div class="cinema">
       <div id="top10cinema" class="accordion">
 
-        <div *ngFor="let person of persons">
+        <!--        <mat-accordion>-->
+        <ng-container *ngFor="let person of persons">
+          <!--            <mat-expansion-panel>-->
+          <!--              <mat-expansion-panel-header>-->
           <h3 class="bc_ffffff">1. {{person.name}}</h3>
+          <!--              </mat-expansion-panel-header>-->
           <div class="bc_ffffff accFirst">
             <div class="col_1">
               <div class="stills stills_5" title="Średnia 5.00, przy ilości głosów 5"></div>
@@ -47,15 +68,20 @@
             </div>
             <div class="col_3">
               <a href="/osoba/person.id/adam-sandler/" title="person.name"><img class="poster b_e2e2e2"
-                                                                                src="/cache/15136.31882.h69.w48.jpg"
+                                                                                src="/assets/images/layout/defaultPerson_48x69.jpg"
                                                                                 alt="person.name"
                                                                                 title="person.name"/></a>
             </div>
             <div class="clear"></div>
           </div>
-        </div>
+          <!--            </mat-expansion-panel>-->
+        </ng-container>
+        <!--        </mat-accordion>-->
+
       </div>
     </div>
+
+
   </div>
   <div id="reviews" class="b_e2e2e2 fc_4c4c4c">
     <div class="top_box">
@@ -86,9 +112,9 @@
             </div>
             <div class="col_2">
               <a href="/film/950/chciwosc/" title="Chciwość"><img class="poster b_e2e2e2"
-                                                                                     src="http://www.filmy.pl/cache/19138.b2b5c.h69.w48.jpg"
-                                                                                     alt="Chciwość"
-                                                                                     title="Chciwość"/></a>
+                                                                  src="http://www.filmy.pl/cache/19138.b2b5c.h69.w48.jpg"
+                                                                  alt="Chciwość"
+                                                                  title="Chciwość"/></a>
             </div>
             <div class="clear"></div>
           </div>
