@@ -7,7 +7,6 @@ import {ContactComponent} from "./component/contact/contact.component";
 import {FormediaComponent} from "./component/formedia/formedia.component";
 import {RegulationsComponent} from "./component/regulations/regulations.component";
 import {PrivacypolicyComponent} from "./component/privacypolicy/privacypolicy.component";
-import {AaadummyComponent} from "./component/aaadummy/aaadummy.component";
 import {FilmComponent} from "./component/film/film.component";
 import {PersonComponent} from "./component/person/person.component";
 
@@ -25,8 +24,6 @@ const routes: Routes = [
   {path: 'film/:id/:fakeTitle', component: FilmComponent},
   // person
   {path: 'osoba/:id/:fakeName', component: PersonComponent},
-  // dev
-  {path: 'dummy', component: AaadummyComponent},//FIXME
 ];
 
 @NgModule({

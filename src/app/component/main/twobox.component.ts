@@ -20,7 +20,6 @@ export class TwoboxComponent implements OnInit {
     private filmService: FilmService,
     private personService: PersonService
   ) {
-    this.collectFilms();
   }
 
   ngOnInit() {

@@ -1,53 +1,57 @@
-<div id="left" class="left">
-  <div class="contentBox b_e2e2e2">
-    <div class="contentBlock">
-      <div style="text-align: justify;">Filmy.pl jako ogólnopolski portal społecznościowy dociera do tysięcy polskich
-        internautów. Nasi Użytkownicy reprezentują wiele zróżnicowanych grup zawodowych oraz wiekowych. Reklama Państwa
-        oferty w naszym portalu to świetny sposób na zainteresowanie swoją marką rzeszy potencjalnych
-        odbiorców.<br/><br/>Jeżeli są Państwo zainteresowani reklamowaniem swoich produktów i usług w Internecie,
-        trafili Państwo pod właściwy adres. Filmy.pl jako część Grupy NETMEDIA S.A. korzystają z bogatego doświadczenia
-        naszej firmy na rynku internetowym - także w branży reklamy interaktywnej.<br/><br/>Jesteśmy w stanie
-        zaprojektować i wykonać dla Państwa zarówno klasyczne kampanie bannerowe, jak i rozliczane według
-        efektów.<br/><br/>W razie Państwa pytań jesteśmy do dyspozycji - wystarczy jedynie wypełnić poniższy formularz.
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
+<div class="row">
+  <div class="col f_content">
 
-  <div id="forms" class="b_e2e2e2">
-    <div class="top_box fc_4c4c4c">
-      <div class="div_title">Formularz <span class="fc_005181">kontaktowy w sprawie reklamy</span></div>
-      <div class="clear"></div>
+    <div style="text-align: justify;">Filmy.pl jako ogólnopolski portal społecznościowy dociera do tysięcy polskich
+      internautów. Nasi Użytkownicy reprezentują wiele zróżnicowanych grup zawodowych oraz wiekowych. Reklama Państwa
+      oferty w naszym portalu to świetny sposób na zainteresowanie swoją marką rzeszy potencjalnych
+      odbiorców.<br/><br/>Jeżeli są Państwo zainteresowani reklamowaniem swoich produktów i usług w Internecie,
+      trafili Państwo pod właściwy adres. Filmy.pl jako część Grupy NETMEDIA S.A. korzystają z bogatego doświadczenia
+      naszej firmy na rynku internetowym - także w branży reklamy interaktywnej.<br/><br/>Jesteśmy w stanie
+      zaprojektować i wykonać dla Państwa zarówno klasyczne kampanie bannerowe, jak i rozliczane według
+      efektów.<br/><br/>W razie Państwa pytań jesteśmy do dyspozycji - wystarczy jedynie wypełnić poniższy formularz.
     </div>
 
-    <div class="height_20"> </div>
 
-    <div class="center_form"><form enctype="application/x-www-form-urlencoded" action="" method="post"><dl class="zend_form">
-      <label for="content" class="fc_4c4c4c label_150 left required">Treść wiadomości</label>
+    <div class="div_title">Formularz <span class="fc_005181">kontaktowy w sprawie reklamy</span></div>
 
-      <textarea name="content" id="content" class="t_410x150 left" cols="1" rows="1"></textarea><div class="clear height_10"></div>
-      <label for="email" class="fc_4c4c4c label_150 left required">E-mail</label>
 
-      <input type="text" name="email" id="email" value="" class="i_410x20 left"><div class="clear height_10"></div>
-      <label for="verify-input" class="fc_4c4c4c label_150_67 left required">Przepisz kod</label>
+    <div class="center_form">
+      <form enctype="application/x-www-form-urlencoded" action="" method="post">
+        <dl class="zend_form">
+          <label for="content" class="fc_4c4c4c label_150 left required">Treść wiadomości</label>
 
-      <img width="410" height="50" alt="" src="/assets/images/captcha/f2a5e04c9528b92f9f94ea37e133941d.png"/><br/>
-      <input type="hidden" name="verify[id]" value="f2a5e04c9528b92f9f94ea37e133941d" messages="Przepisany kod nie jest prawidłowy" class="i_410x20_r right" id="verify-id">
-      <input type="text" name="verify[input]" id="verify-input" value="" messages="Przepisany kod nie jest prawidłowy" class="i_410x20_r right"><div class="clear height_10"></div>
+          <textarea name="content" id="content" class="t_410x150 left" cols="1" rows="1"></textarea>
+          <div class="clear height_10"></div>
+          <label for="email" class="fc_4c4c4c label_150 left required">E-mail</label>
 
-      <input type="image" name="submit" id="submit" src="/assets/images/layout/button_send_msg_410x30.gif" class="b_410x30_r right"><div class="clear height_10"></div>
+          <input type="text" name="email" id="email" value="" class="i_410x20 left">
+          <div class="clear height_10"></div>
+          <label for="verify-input" class="fc_4c4c4c label_150_67 left required">Przepisz kod</label>
 
-      <input type="hidden" name="userSent" value="1" id="userSent"></dl></form></div>
+          <img width="410" height="50" alt="" src="/assets/images/captcha/f2a5e04c9528b92f9f94ea37e133941d.png"/><br/>
+          <input type="hidden" name="verify[id]" value="f2a5e04c9528b92f9f94ea37e133941d"
+                 messages="Przepisany kod nie jest prawidłowy" class="i_410x20_r right" id="verify-id">
+          <input type="text" name="verify[input]" id="verify-input" value=""
+                 messages="Przepisany kod nie jest prawidłowy"
+                 class="i_410x20_r right">
+          <div class="clear height_10"></div>
+
+          <input type="image" name="submit" id="submit" src="/assets/images/layout/button_send_msg_410x30.gif"
+                 class="b_410x30_r right">
+          <div class="clear height_10"></div>
+
+          <input type="hidden" name="userSent" value="1" id="userSent"></dl>
+      </form>
+    </div>
 
     <div class="text_start fc_4c4c4c">
       Odpowiedź zostanie wysłana na adres, który podano w formularzu.
     </div>
-    <div class="height_10"></div>
+
+
+  </div>
+  <div class="col-4">
+    <app-newsbox></app-newsbox>
+    <app-previewbox></app-previewbox>
   </div>
 </div>
-
-<div id="right" class="left">
-  <app-newsbox></app-newsbox>
-  <app-previewbox></app-previewbox>
-</div>
-<div class="clear"></div>
