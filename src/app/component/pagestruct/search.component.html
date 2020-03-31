@@ -1,230 +1,230 @@
-<div id="search">
-  <div class="fc_4c4c4c header">
-    <div class="left_sb left"></div>
-    <div class="center_sb left b_e2e2e2">
-      <form id="searchForm" name="searchFilms" action="/szukaj/" method="get">
-        <input id="hiddenWhatSearch" name="filter[whatSearch]" value="films" type="hidden"/>
+<div class="row">
+<!--  <div class="fc_4c4c4c header">-->
+<!--    <div class="left_sb left"></div>-->
+<!--    <div class="center_sb left b_e2e2e2">-->
+<!--      <form id="searchForm" name="searchFilms" action="/szukaj/" method="get">-->
+<!--        <input id="hiddenWhatSearch" name="filter[whatSearch]" value="films" type="hidden"/>-->
 
-        <input class="b b_3d9ed3 right" type="submit" name="userSent" value="Szukaj"/>
+<!--        <input class="b b_3d9ed3 right" type="submit" name="userSent" value="Szukaj"/>-->
 
-        <div class="right" style="width: 20px;">&nbsp;</div>
+<!--        <div class="right" style="width: 20px;">&nbsp;</div>-->
 
-        <div class="right">
-          <label for="whatSearch">Szukaj w</label>
-          <div>
-            <select class="b_3d9ed3 fc_777777 s" id="whatSearch">
-              <option value="films">Filmy</option>
-              <option value="persons">Ludzie filmu</option>
-              <option value="forums">Forum</option>
-              <option value="users">Użytkownicy</option>
-              <option value="articles">Aktualności</option>
-            </select>
-          </div>
-        </div>
+<!--        <div class="right">-->
+<!--          <label for="whatSearch">Szukaj w</label>-->
+<!--          <div>-->
+<!--            <select class="b_3d9ed3 fc_777777 s" id="whatSearch">-->
+<!--              <option value="films">Filmy</option>-->
+<!--              <option value="persons">Ludzie filmu</option>-->
+<!--              <option value="forums">Forum</option>-->
+<!--              <option value="users">Użytkownicy</option>-->
+<!--              <option value="articles">Aktualności</option>-->
+<!--            </select>-->
+<!--          </div>-->
+<!--        </div>-->
 
-        <div class="right" style="width: 20px;">&nbsp;</div>
+<!--        <div class="right" style="width: 20px;">&nbsp;</div>-->
 
-        <div id="bonusSearchFilms" class="right">
-          <div class="left" style="width: 20px;">&nbsp;</div>
+<!--        <div id="bonusSearchFilms" class="right">-->
+<!--          <div class="left" style="width: 20px;">&nbsp;</div>-->
 
-          <div class="left">
-            <label for="typeid">Gatunek filmu</label>
-            <div>
-              <select class="b_3d9ed3 fc_777777 s" id="typeid" name="filter[typeID]">
-                <option value=""></option>
-                <option value="28">Akcja</option>
-                <option value="10">Animacja</option>
-                <option value="34">Anime</option>
-                <option value="6">Biografia</option>
-                <option value="33">Czarna komedia</option>
-                <option value="17">Dokument</option>
-                <option value="44">Dokumentalizowany</option>
-                <option value="1">Dramat</option>
-                <option value="40">Erotyczny</option>
-                <option value="11">Familijny</option>
-                <option value="18">Fantasy</option>
-                <option value="38">Gangsterski</option>
-                <option value="14">Historyczny</option>
-                <option value="9">Horror</option>
-                <option value="32">Katastroficzny</option>
-                <option value="3">Komedia</option>
-                <option value="26">Komedia romantyczna</option>
-                <option value="13">Kostiumowy</option>
-                <option value="35">Krótki metraż</option>
-                <option value="15">Kryminał</option>
-                <option value="20">Melodramat</option>
-                <option value="30">Młodzieżowy</option>
-                <option value="25">Musical</option>
-                <option value="8">Muzyczny</option>
-                <option value="42">Niemy</option>
-                <option value="36">Nowelowy</option>
-                <option value="12">Obyczajowy</option>
-                <option value="41">Paradokument</option>
-                <option value="43">Płaszcza i szpady</option>
-                <option value="21">Przygodowy</option>
-                <option value="19">Psychologiczny</option>
-                <option value="4">Romans</option>
-                <option value="7">Science-fiction</option>
-                <option value="5">Sensacyjny</option>
-                <option value="23">Sportowy</option>
-                <option value="39">Szpiegowski</option>
-                <option value="22">Thriller</option>
-                <option value="37">Thriller polityczny</option>
-                <option value="31">Western</option>
-                <option value="2">Wojenny</option>
-              </select>
-            </div>
-          </div>
+<!--          <div class="left">-->
+<!--            <label for="typeid">Gatunek filmu</label>-->
+<!--            <div>-->
+<!--              <select class="b_3d9ed3 fc_777777 s" id="typeid" name="filter[typeID]">-->
+<!--                <option value=""></option>-->
+<!--                <option value="28">Akcja</option>-->
+<!--                <option value="10">Animacja</option>-->
+<!--                <option value="34">Anime</option>-->
+<!--                <option value="6">Biografia</option>-->
+<!--                <option value="33">Czarna komedia</option>-->
+<!--                <option value="17">Dokument</option>-->
+<!--                <option value="44">Dokumentalizowany</option>-->
+<!--                <option value="1">Dramat</option>-->
+<!--                <option value="40">Erotyczny</option>-->
+<!--                <option value="11">Familijny</option>-->
+<!--                <option value="18">Fantasy</option>-->
+<!--                <option value="38">Gangsterski</option>-->
+<!--                <option value="14">Historyczny</option>-->
+<!--                <option value="9">Horror</option>-->
+<!--                <option value="32">Katastroficzny</option>-->
+<!--                <option value="3">Komedia</option>-->
+<!--                <option value="26">Komedia romantyczna</option>-->
+<!--                <option value="13">Kostiumowy</option>-->
+<!--                <option value="35">Krótki metraż</option>-->
+<!--                <option value="15">Kryminał</option>-->
+<!--                <option value="20">Melodramat</option>-->
+<!--                <option value="30">Młodzieżowy</option>-->
+<!--                <option value="25">Musical</option>-->
+<!--                <option value="8">Muzyczny</option>-->
+<!--                <option value="42">Niemy</option>-->
+<!--                <option value="36">Nowelowy</option>-->
+<!--                <option value="12">Obyczajowy</option>-->
+<!--                <option value="41">Paradokument</option>-->
+<!--                <option value="43">Płaszcza i szpady</option>-->
+<!--                <option value="21">Przygodowy</option>-->
+<!--                <option value="19">Psychologiczny</option>-->
+<!--                <option value="4">Romans</option>-->
+<!--                <option value="7">Science-fiction</option>-->
+<!--                <option value="5">Sensacyjny</option>-->
+<!--                <option value="23">Sportowy</option>-->
+<!--                <option value="39">Szpiegowski</option>-->
+<!--                <option value="22">Thriller</option>-->
+<!--                <option value="37">Thriller polityczny</option>-->
+<!--                <option value="31">Western</option>-->
+<!--                <option value="2">Wojenny</option>-->
+<!--              </select>-->
+<!--            </div>-->
+<!--          </div>-->
 
-          <div class="left" style="width: 20px;">&nbsp;</div>
+<!--          <div class="left" style="width: 20px;">&nbsp;</div>-->
 
-          <div class="left">
-            <label for="countryid">Kraj filmu</label>
-            <div>
-              <select class="b_3d9ed3 fc_777777 s" id="countryid" name="filter[countryID]">
-                <option value=""></option>
-                <option value="19">Afganistan</option>
-                <option value="20">Argentyna</option>
-                <option value="18">Australia</option>
-                <option value="42">Austria</option>
-                <option value="11">Belgia</option>
-                <option value="55">Bośnia i Hercegowina</option>
-                <option value="23">Brazylia</option>
-                <option value="21">Bułgaria</option>
-                <option value="28">Chile</option>
-                <option value="14">Chiny</option>
-                <option value="54">Chorwacja</option>
-                <option value="59">Cypr</option>
-                <option value="65">Czechosłowacja</option>
-                <option value="6">Czechy</option>
-                <option value="32">Dania</option>
-                <option value="33">Finlandia</option>
-                <option value="3">Francja</option>
-                <option value="46">Grecja</option>
-                <option value="25">Hiszpania</option>
-                <option value="15">Holandia</option>
-                <option value="13">Hongkong</option>
-                <option value="52">Indie</option>
-                <option value="5">Iran</option>
-                <option value="26">Irlandia</option>
-                <option value="35">Islandia</option>
-                <option value="40">Izrael</option>
-                <option value="24">Japonia</option>
-                <option value="10">Kanada</option>
-                <option value="44">Kazachstan</option>
-                <option value="58">Kolumbia</option>
-                <option value="37">Korea Południowa</option>
-                <option value="50">Liban</option>
-                <option value="53">Luksemburg</option>
-                <option value="66">Malezja</option>
-                <option value="48">Malta</option>
-                <option value="36">Meksyk</option>
-                <option value="49">Monako</option>
-                <option value="9">Niemcy</option>
-                <option value="34">Norwegia</option>
-                <option value="4">Nowa Zelandia</option>
-                <option value="61">Panama</option>
-                <option value="47">Peru</option>
-                <option value="1">Polska</option>
-                <option value="45">Portugalia</option>
-                <option value="12">Rosja</option>
-                <option value="43">RPA</option>
-                <option value="16">Rumunia</option>
-                <option value="63">Serbia</option>
-                <option value="29">Słowacja</option>
-                <option value="22">Słowenia</option>
-                <option value="38">Szwajcaria</option>
-                <option value="31">Szwecja</option>
-                <option value="62">Tajlandia</option>
-                <option value="64">Tajwan</option>
-                <option value="56">Tunezja</option>
-                <option value="30">Turcja</option>
-                <option value="67">Ukraina</option>
-                <option value="41">Urugwaj</option>
-                <option value="2">USA</option>
-                <option value="17">Węgry</option>
-                <option value="7">Wielka Brytania</option>
-                <option value="60">Wietnam</option>
-                <option value="8">Włochy</option>
-                <option value="51">Zimbabwe</option>
-                <option value="57">Zjednoczone Emiraty Arabskie</option>
-              </select>
-            </div>
-          </div>
-          <div class="clear"></div>
-        </div>
+<!--          <div class="left">-->
+<!--            <label for="countryid">Kraj filmu</label>-->
+<!--            <div>-->
+<!--              <select class="b_3d9ed3 fc_777777 s" id="countryid" name="filter[countryID]">-->
+<!--                <option value=""></option>-->
+<!--                <option value="19">Afganistan</option>-->
+<!--                <option value="20">Argentyna</option>-->
+<!--                <option value="18">Australia</option>-->
+<!--                <option value="42">Austria</option>-->
+<!--                <option value="11">Belgia</option>-->
+<!--                <option value="55">Bośnia i Hercegowina</option>-->
+<!--                <option value="23">Brazylia</option>-->
+<!--                <option value="21">Bułgaria</option>-->
+<!--                <option value="28">Chile</option>-->
+<!--                <option value="14">Chiny</option>-->
+<!--                <option value="54">Chorwacja</option>-->
+<!--                <option value="59">Cypr</option>-->
+<!--                <option value="65">Czechosłowacja</option>-->
+<!--                <option value="6">Czechy</option>-->
+<!--                <option value="32">Dania</option>-->
+<!--                <option value="33">Finlandia</option>-->
+<!--                <option value="3">Francja</option>-->
+<!--                <option value="46">Grecja</option>-->
+<!--                <option value="25">Hiszpania</option>-->
+<!--                <option value="15">Holandia</option>-->
+<!--                <option value="13">Hongkong</option>-->
+<!--                <option value="52">Indie</option>-->
+<!--                <option value="5">Iran</option>-->
+<!--                <option value="26">Irlandia</option>-->
+<!--                <option value="35">Islandia</option>-->
+<!--                <option value="40">Izrael</option>-->
+<!--                <option value="24">Japonia</option>-->
+<!--                <option value="10">Kanada</option>-->
+<!--                <option value="44">Kazachstan</option>-->
+<!--                <option value="58">Kolumbia</option>-->
+<!--                <option value="37">Korea Południowa</option>-->
+<!--                <option value="50">Liban</option>-->
+<!--                <option value="53">Luksemburg</option>-->
+<!--                <option value="66">Malezja</option>-->
+<!--                <option value="48">Malta</option>-->
+<!--                <option value="36">Meksyk</option>-->
+<!--                <option value="49">Monako</option>-->
+<!--                <option value="9">Niemcy</option>-->
+<!--                <option value="34">Norwegia</option>-->
+<!--                <option value="4">Nowa Zelandia</option>-->
+<!--                <option value="61">Panama</option>-->
+<!--                <option value="47">Peru</option>-->
+<!--                <option value="1">Polska</option>-->
+<!--                <option value="45">Portugalia</option>-->
+<!--                <option value="12">Rosja</option>-->
+<!--                <option value="43">RPA</option>-->
+<!--                <option value="16">Rumunia</option>-->
+<!--                <option value="63">Serbia</option>-->
+<!--                <option value="29">Słowacja</option>-->
+<!--                <option value="22">Słowenia</option>-->
+<!--                <option value="38">Szwajcaria</option>-->
+<!--                <option value="31">Szwecja</option>-->
+<!--                <option value="62">Tajlandia</option>-->
+<!--                <option value="64">Tajwan</option>-->
+<!--                <option value="56">Tunezja</option>-->
+<!--                <option value="30">Turcja</option>-->
+<!--                <option value="67">Ukraina</option>-->
+<!--                <option value="41">Urugwaj</option>-->
+<!--                <option value="2">USA</option>-->
+<!--                <option value="17">Węgry</option>-->
+<!--                <option value="7">Wielka Brytania</option>-->
+<!--                <option value="60">Wietnam</option>-->
+<!--                <option value="8">Włochy</option>-->
+<!--                <option value="51">Zimbabwe</option>-->
+<!--                <option value="57">Zjednoczone Emiraty Arabskie</option>-->
+<!--              </select>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="clear"></div>-->
+<!--        </div>-->
 
-        <div id="bonusSearchPersons" style="display: none;" class="right">
-          <div class="left" style="width: 20px;">&nbsp;</div>
+<!--        <div id="bonusSearchPersons" style="display: none;" class="right">-->
+<!--          <div class="left" style="width: 20px;">&nbsp;</div>-->
 
-          <div class="left">
-            <label for="sexIDP">Płeć</label>
-            <div>
-              <select class="b_3d9ed3 fc_777777 s" id="sexIDP" name="filter[sexIDP]">
-                <option value=""></option>
-                <option value="1">mężczyźni</option>
-                <option value="2">kobiety</option>
-              </select>
-            </div>
-          </div>
+<!--          <div class="left">-->
+<!--            <label for="sexIDP">Płeć</label>-->
+<!--            <div>-->
+<!--              <select class="b_3d9ed3 fc_777777 s" id="sexIDP" name="filter[sexIDP]">-->
+<!--                <option value=""></option>-->
+<!--                <option value="1">mężczyźni</option>-->
+<!--                <option value="2">kobiety</option>-->
+<!--              </select>-->
+<!--            </div>-->
+<!--          </div>-->
 
-          <div class="left" style="width: 20px;">&nbsp;</div>
+<!--          <div class="left" style="width: 20px;">&nbsp;</div>-->
 
-          <div class="left">
-            <label for="roleID">Profesja</label>
-            <div>
-              <select class="b_3d9ed3 fc_777777 s" id="roleID" name="filter[roleID]">
-                <option value=""></option>
-                <option value="1">Aktorzy</option>
-                <option value="2">Reżyseria</option>
-                <option value="3">Scenariusz</option>
-                <option value="4">Autor dzieła literackiego</option>
-                <option value="5">Zdjęcia</option>
-                <option value="6">Muzyka</option>
-                <option value="7">Montaż</option>
-                <option value="8">Scenografia</option>
-                <option value="9">Efekty specjalne</option>
-                <option value="10">Produkcja</option>
-                <option value="11">Produkcja wykonawcza</option>
-                <option value="12">Koprodukcja</option>
-                <option value="13">Kostiumy</option>
-                <option value="14">Charakteryzacja</option>
-                <option value="15">Dźwięk</option>
-              </select>
-            </div>
-          </div>
-          <div class="clear"></div>
-        </div>
+<!--          <div class="left">-->
+<!--            <label for="roleID">Profesja</label>-->
+<!--            <div>-->
+<!--              <select class="b_3d9ed3 fc_777777 s" id="roleID" name="filter[roleID]">-->
+<!--                <option value=""></option>-->
+<!--                <option value="1">Aktorzy</option>-->
+<!--                <option value="2">Reżyseria</option>-->
+<!--                <option value="3">Scenariusz</option>-->
+<!--                <option value="4">Autor dzieła literackiego</option>-->
+<!--                <option value="5">Zdjęcia</option>-->
+<!--                <option value="6">Muzyka</option>-->
+<!--                <option value="7">Montaż</option>-->
+<!--                <option value="8">Scenografia</option>-->
+<!--                <option value="9">Efekty specjalne</option>-->
+<!--                <option value="10">Produkcja</option>-->
+<!--                <option value="11">Produkcja wykonawcza</option>-->
+<!--                <option value="12">Koprodukcja</option>-->
+<!--                <option value="13">Kostiumy</option>-->
+<!--                <option value="14">Charakteryzacja</option>-->
+<!--                <option value="15">Dźwięk</option>-->
+<!--              </select>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="clear"></div>-->
+<!--        </div>-->
 
-        <div id="bonusSearchUsers" style="display: none;" class="right">
-          <div class="left" style="width: 20px;">&nbsp;</div>
+<!--        <div id="bonusSearchUsers" style="display: none;" class="right">-->
+<!--          <div class="left" style="width: 20px;">&nbsp;</div>-->
 
-          <div class="left">
-            <label for="sexIDF">Płeć</label>
-            <div>
-              <select class="b_3d9ed3 fc_777777 s" id="sexIDF" name="filter[sexIDF]">
-                <option value=""></option>
-                <option value="1">mężczyźni</option>
-                <option value="2">kobiety</option>
-              </select>
-            </div>
-          </div>
-          <div class="clear"></div>
-        </div>
+<!--          <div class="left">-->
+<!--            <label for="sexIDF">Płeć</label>-->
+<!--            <div>-->
+<!--              <select class="b_3d9ed3 fc_777777 s" id="sexIDF" name="filter[sexIDF]">-->
+<!--                <option value=""></option>-->
+<!--                <option value="1">mężczyźni</option>-->
+<!--                <option value="2">kobiety</option>-->
+<!--              </select>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="clear"></div>-->
+<!--        </div>-->
 
-        <div class="right">
-          <label for="word">Szukana fraza</label>
-          <div><input class="b_3d9ed3 fc_777777 i" type="text" id="word" name="word" value=""/></div>
-        </div>
+<!--        <div class="right">-->
+<!--          <label for="word">Szukana fraza</label>-->
+<!--          <div><input class="b_3d9ed3 fc_777777 i" type="text" id="word" name="word" value=""/></div>-->
+<!--        </div>-->
 
-        <div class="clear"></div>
+<!--        <div class="clear"></div>-->
 
-      </form>
-      <div class="clear"></div>
-    </div>
-    <div class="right_sb left"></div>
-    <div class="clear"></div>
-  </div>
+<!--      </form>-->
+<!--      <div class="clear"></div>-->
+<!--    </div>-->
+<!--    <div class="right_sb left"></div>-->
+<!--    <div class="clear"></div>-->
+<!--  </div>-->
 
-  <div class="clear height_10"></div>
+<!--  <div class="clear height_10"></div>-->
 </div>

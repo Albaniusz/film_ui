@@ -1,44 +1,52 @@
-<div id="news" class="b_e2e2e2 fc_4c4c4c">
-  <div class="top_box">
-    <div class="div_title"><h1 style="float: left;">Aktualności &nbsp;</h1> <span class="fc_005181"><h1
-      style="float: left;">filmowe</h1></span>
-      <div class="clear"></div>
-    </div>
-    <div class="clear"></div>
-  </div>
-  <div>
-    <div id="actualnews" class="accordion">
+<div class="f_contentbox">
+ <h1>Aktualności filmowe</h1>
 
-<!--      <mat-accordion>-->
 
-        <ng-container *ngFor="let newsItem of news">
-<!--          <mat-expansion-panel>-->
-<!--            <mat-expansion-panel-header>-->
-              <h2 class="bc_ffffff hFirst">
-                <img src="/assets/images/layout/icon_paper2_10x10.gif" alt="{{newsItem.title}}..."
-                     title="{{newsItem.title}}..." style="padding-right: 6px;"/>
-                {{newsItem.title}}...
-              </h2>
-<!--            </mat-expansion-panel-header>-->
-            <div class="bc_ffffff accFirst">
-              <div class="col_1 left">
-                <a href="{{newsItem.link}}"><img class="poster b_777777" src="http://www.filmy.pl{{newsItem.poster}}"
-                                                 alt="{{newsItem.title}}"
-                                                 title="{{newsItem.title}}"/></a>
-              </div>
-              <div class="col_2 left">
-                <div class="text">
-                  <a href="{{newsItem.link}}">{{newsItem.summary}}</a> [<span class="more_0 fc_45a2d7"
-                                                                              style="cursor: pointer;"> więcej </span>]
-                </div>
-              </div>
-              <div class="clear"></div>
-            </div>
-<!--          </mat-expansion-panel>-->
-        </ng-container>
+  <mat-accordion displayMode="flat" hideToggle>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>News 1</mat-expansion-panel-header>
+      Lorem ipsum...
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>News 2</mat-expansion-panel-header>
+      Lorem ipsum...
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>News 3</mat-expansion-panel-header>
+      Lorem ipsum...
+    </mat-expansion-panel>
+  </mat-accordion>
 
-<!--      </mat-accordion>-->
-
-    </div>
-  </div>
 </div>
+
+<!--    <div id="actualnews" class="accordion">-->
+
+<!--&lt;!&ndash;      <mat-accordion>&ndash;&gt;-->
+
+<!--        <ng-container *ngFor="let newsItem of news">-->
+<!--&lt;!&ndash;          <mat-expansion-panel>&ndash;&gt;-->
+<!--&lt;!&ndash;            <mat-expansion-panel-header>&ndash;&gt;-->
+<!--              <h2 class="bc_ffffff hFirst">-->
+<!--                <img src="/assets/images/layout/icon_paper2_10x10.gif" alt="{{newsItem.title}}..."-->
+<!--                     title="{{newsItem.title}}..." style="padding-right: 6px;"/>-->
+<!--                {{newsItem.title}}...-->
+<!--              </h2>-->
+<!--&lt;!&ndash;            </mat-expansion-panel-header>&ndash;&gt;-->
+<!--            <div class="bc_ffffff accFirst">-->
+<!--              <div class="col_1 left">-->
+<!--                <a href="{{newsItem.link}}"><img class="poster b_777777" src="http://www.filmy.pl{{newsItem.poster}}"-->
+<!--                                                 alt="{{newsItem.title}}"-->
+<!--                                                 title="{{newsItem.title}}"/></a>-->
+<!--              </div>-->
+<!--              <div class="col_2 left">-->
+<!--                <div class="text">-->
+<!--                  <a href="{{newsItem.link}}">{{newsItem.summary}}</a> [<span class="more_0 fc_45a2d7"-->
+<!--                                                                              style="cursor: pointer;"> więcej </span>]-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="clear"></div>-->
+<!--            </div>-->
+<!--&lt;!&ndash;          </mat-expansion-panel>&ndash;&gt;-->
+<!--        </ng-container>-->
+
+<!--&lt;!&ndash;      </mat-accordion>&ndash;&gt;-->

@@ -42,7 +42,6 @@ import {FilminfoboxComponent} from "./component/film/filminfobox.component";
 import {FilmphotoboxComponent} from "./component/film/filmphotobox.component";
 import {FilmographyComponent} from "./component/person/filmography.component";
 
-// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,9 +77,9 @@ import {FilmographyComponent} from "./component/person/filmography.component";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    // BrowserAnimationsModule,
-    // MatSliderModule,
-    // MatExpansionModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatExpansionModule,
   ],
   providers: [
     FilmService,

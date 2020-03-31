@@ -1,139 +1,215 @@
-<div id="twobox">
-  <div id="top" class="b_e2e2e2 fc_4c4c4c">
+<div class="row">
+  <div class="col">
+    <mat-accordion displayMode="flat" hideToggle>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>Movie</mat-expansion-panel-header>
 
-    <div class="top_box">
-      <div class="div_buttons">
-        <p class="notclick">Top 10</p>
-        <a href="javascript:void(0);" class="selected" id="topten">Filmy</a>
-        <a href="javascript:void(0);" id="cinema">Ludzie</a>
-        <div class="clear"></div>
-      </div>
-      <div class="clear"></div>
-    </div>
-    <div class="topten">
-      <div id="top10dvdbl" class="accordion">
-
-        <!--        <mat-accordion hideToggle displayMode="flat">-->
-
-        <ng-container *ngFor="let film of films">
-          <!--            <mat-expansion-panel class="">-->
-          <!--              <mat-expansion-panel-header class="">-->
-          <h3 class="bc_ffffff">1. {{film.title}}</h3>
-          <!--              </mat-expansion-panel-header>-->
-          <div class="bc_ffffff accFirst">
-            <div class="col_1">
-              <div class="stills stills_5" title="Średnia 5.00, przy ilości głosów 1"></div>
-              <div class="genre">Gatunek:
-                <ng-container *ngFor="let genre of film.genres">{{genre.name}},</ng-container>
+        <mat-accordion displayMode="flat" hideToggle>
+          <ng-container *ngFor="let film of films">
+            <mat-expansion-panel>
+              <mat-expansion-panel-header><span class="bc_ffffff">{{film.title}}</span></mat-expansion-panel-header>
+              <div class="row">
+                <div class="col-sm">
+                  <div class="stills stills_5" title="Średnia 5.00, przy ilości głosów 1"></div>
+                  <p>Gatunek:
+                  <ng-container *ngFor="let genre of film.genres">{{genre.name}},</ng-container></p>
+                  <p>Produkcja:
+                  <ng-container *ngFor="let country of film.countries">{{country.name}},</ng-container></p>
+                  <p><a href="{{film.id}}/dziecinstwo-ikara/media/" title="Zobacz zwiastun">Zobacz zwiastun</a></p>
+                </div>
+                <div class="col-3">
+                  <a href="/film/{{film.id}}/dziecinstwo-ikara/" title="{{film.title}}"><img
+                    class="poster b_e2e2e2" src="/assets/images/layout/defaultPoster_48x69.jpg" alt="{{film.title}}"
+                    title="{{film.title}}"/></a>
+                </div>
               </div>
-              <div class="production">Produkcja:
-                <ng-container *ngFor="let country of film.countries">{{country.name}},</ng-container>
-              </div>
-              <div class="trailer"><a href="{{film.id}}/dziecinstwo-ikara/media/"
-                                      title="Zobacz zwiastun">Zobacz zwiastun</a></div>
-              <div class="comments"></div>
-            </div>
-            <div class="col_3">
-              <a href="/film/{{film.id}}/dziecinstwo-ikara/" title="{{film.title}}"><img
-                class="poster b_e2e2e2" src="/assets/images/layout/defaultPoster_48x69.jpg" alt="{{film.title}}"
-                title="{{film.title}}"/></a>
-            </div>
-            <div class="clear"></div>
-          </div>
-          <!--            </mat-expansion-panel>-->
-        </ng-container>
+            </mat-expansion-panel>
+          </ng-container>
+        </mat-accordion>
 
+      </mat-expansion-panel>
 
-        <!--        </mat-accordion>-->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>Person</mat-expansion-panel-header>
 
+        <mat-accordion displayMode="flat" hideToggle>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>Person 1</mat-expansion-panel-header>
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>Person 2</mat-expansion-panel-header>
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>Person 3</mat-expansion-panel-header>
+          </mat-expansion-panel>
+        </mat-accordion>
 
-      </div>
-    </div>
-    <div class="cinema">
-      <div id="top10cinema" class="accordion">
-
-        <!--        <mat-accordion>-->
-        <ng-container *ngFor="let person of persons">
-          <!--            <mat-expansion-panel>-->
-          <!--              <mat-expansion-panel-header>-->
-          <h3 class="bc_ffffff">1. {{person.name}}</h3>
-          <!--              </mat-expansion-panel-header>-->
-          <div class="bc_ffffff accFirst">
-            <div class="col_1">
-              <div class="stills stills_5" title="Średnia 5.00, przy ilości głosów 5"></div>
-              <div class="genre"></div>
-            </div>
-            <div class="col_2">
-              <div class="comments"></div>
-            </div>
-            <div class="col_3">
-              <a href="/osoba/person.id/adam-sandler/" title="person.name"><img class="poster b_e2e2e2"
-                                                                                src="/assets/images/layout/defaultPerson_48x69.jpg"
-                                                                                alt="person.name"
-                                                                                title="person.name"/></a>
-            </div>
-            <div class="clear"></div>
-          </div>
-          <!--            </mat-expansion-panel>-->
-        </ng-container>
-        <!--        </mat-accordion>-->
-
-      </div>
-    </div>
-
-
+      </mat-expansion-panel>
+    </mat-accordion>
   </div>
-  <div id="reviews" class="b_e2e2e2 fc_4c4c4c">
-    <div class="top_box">
-      <div class="div_buttons">
-        <a href="javascript:void(0);" id="revcin" class="selected">Recenzje Kinowe</a>
-        <a href="javascript:void(0);" id="newfor">Nowe na forum</a>
-        <div class="clear"></div>
-      </div>
-      <div class="clear"></div>
-    </div>
-    <div class="revcin">
-      <div id="cinemareviews" class="accordion">
-
-        <div *ngFor="let review of reviews">
-          <h3 class="bc_ffffff"><img src="/assets/images/layout/icon_paper_10x10.gif" alt="" title=""
-                                     style="padding-right: 6px;"/>Chciwość</h3>
-          <div class="bc_ffffff accFirst">
-            <div class="col_1">
-              <div class="stills stills_0"></div>
-              <div class="text">
-
-                <strong><a href="/film/950/chciwosc/recenzje/1657/trybiki-w-machinie/"
-                           title="Trybiki w machinie">Trybiki w machinie</a></strong><br/>
-                Film J.C. Chandora nie wysila się na tłumaczenie schemat&oacute;w trwającego kryzysu, skupiając się
-                na...
-
-              </div>
-            </div>
-            <div class="col_2">
-              <a href="/film/950/chciwosc/" title="Chciwość"><img class="poster b_e2e2e2"
-                                                                  src="http://www.filmy.pl/cache/19138.b2b5c.h69.w48.jpg"
-                                                                  alt="Chciwość"
-                                                                  title="Chciwość"/></a>
-            </div>
-            <div class="clear"></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="newfor" style="display:none;">
-      <div id="newforum">
-
-        <div class="bc_ffffff" *ngFor="let forumThread of forumThreads">
-          <img src="/assets/images/layout/icon_paper_10x10.gif" alt="" title=""
-               style="padding-right:6px;"/> <a
-          href="/forum/1/film/185/boso-ale-na-rowerze-2009/#p116982">Boso, ale na rowerze
-          (2009)</a>
-        </div>
-
-      </div>
-    </div>
+  <div class="col">
+    <mat-accordion displayMode="flat" hideToggle>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>Review 1</mat-expansion-panel-header>
+        xxx
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>Review 2</mat-expansion-panel-header>
+        xxx
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>Review 3</mat-expansion-panel-header>
+        xxx
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>Review 4</mat-expansion-panel-header>
+        xxx
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>Review 5</mat-expansion-panel-header>
+        xxx
+      </mat-expansion-panel>
+    </mat-accordion>
   </div>
-  <div class="clear"></div>
 </div>
+
+
+<!--<div id="twobox">-->
+<!--  <div id="top" class="b_e2e2e2 fc_4c4c4c">-->
+
+<!--    <div class="top_box">-->
+<!--      <div class="div_buttons">-->
+<!--        <p class="notclick">Top 10</p>-->
+<!--        <a href="javascript:void(0);" class="selected" id="topten">Filmy</a>-->
+<!--        <a href="javascript:void(0);" id="cinema">Ludzie</a>-->
+<!--        <div class="clear"></div>-->
+<!--      </div>-->
+<!--      <div class="clear"></div>-->
+<!--    </div>-->
+<!--    <div class="topten">-->
+<!--      <div id="top10dvdbl" class="accordion">-->
+
+<!--        &lt;!&ndash;        <mat-accordion hideToggle displayMode="flat">&ndash;&gt;-->
+
+<!--        <ng-container *ngFor="let film of films">-->
+<!--          &lt;!&ndash;            <mat-expansion-panel class="">&ndash;&gt;-->
+<!--          &lt;!&ndash;              <mat-expansion-panel-header class="">&ndash;&gt;-->
+<!--          <h3 class="bc_ffffff">1. {{film.title}}</h3>-->
+<!--          &lt;!&ndash;              </mat-expansion-panel-header>&ndash;&gt;-->
+<!--          <div class="bc_ffffff accFirst">-->
+<!--            <div class="col_1">-->
+<!--              <div class="stills stills_5" title="Średnia 5.00, przy ilości głosów 1"></div>-->
+<!--              <div class="genre">Gatunek:-->
+<!--                <ng-container *ngFor="let genre of film.genres">{{genre.name}},</ng-container>-->
+<!--              </div>-->
+<!--              <div class="production">Produkcja:-->
+<!--                <ng-container *ngFor="let country of film.countries">{{country.name}},</ng-container>-->
+<!--              </div>-->
+<!--              <div class="trailer"><a href="{{film.id}}/dziecinstwo-ikara/media/"-->
+<!--                                      title="Zobacz zwiastun">Zobacz zwiastun</a></div>-->
+<!--              <div class="comments"></div>-->
+<!--            </div>-->
+<!--            <div class="col_3">-->
+<!--              <a href="/film/{{film.id}}/dziecinstwo-ikara/" title="{{film.title}}"><img-->
+<!--                class="poster b_e2e2e2" src="/assets/images/layout/defaultPoster_48x69.jpg" alt="{{film.title}}"-->
+<!--                title="{{film.title}}"/></a>-->
+<!--            </div>-->
+<!--            <div class="clear"></div>-->
+<!--          </div>-->
+<!--          &lt;!&ndash;            </mat-expansion-panel>&ndash;&gt;-->
+<!--        </ng-container>-->
+
+
+<!--        &lt;!&ndash;        </mat-accordion>&ndash;&gt;-->
+
+
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="cinema">-->
+<!--      <div id="top10cinema" class="accordion">-->
+
+<!--        &lt;!&ndash;        <mat-accordion>&ndash;&gt;-->
+<!--        <ng-container *ngFor="let person of persons">-->
+<!--          &lt;!&ndash;            <mat-expansion-panel>&ndash;&gt;-->
+<!--          &lt;!&ndash;              <mat-expansion-panel-header>&ndash;&gt;-->
+<!--          <h3 class="bc_ffffff">1. {{person.name}}</h3>-->
+<!--          &lt;!&ndash;              </mat-expansion-panel-header>&ndash;&gt;-->
+<!--          <div class="bc_ffffff accFirst">-->
+<!--            <div class="col_1">-->
+<!--              <div class="stills stills_5" title="Średnia 5.00, przy ilości głosów 5"></div>-->
+<!--              <div class="genre"></div>-->
+<!--            </div>-->
+<!--            <div class="col_2">-->
+<!--              <div class="comments"></div>-->
+<!--            </div>-->
+<!--            <div class="col_3">-->
+<!--              <a href="/osoba/person.id/adam-sandler/" title="person.name"><img class="poster b_e2e2e2"-->
+<!--                                                                                src="/assets/images/layout/defaultPerson_48x69.jpg"-->
+<!--                                                                                alt="person.name"-->
+<!--                                                                                title="person.name"/></a>-->
+<!--            </div>-->
+<!--            <div class="clear"></div>-->
+<!--          </div>-->
+<!--          &lt;!&ndash;            </mat-expansion-panel>&ndash;&gt;-->
+<!--        </ng-container>-->
+<!--        &lt;!&ndash;        </mat-accordion>&ndash;&gt;-->
+
+<!--      </div>-->
+<!--    </div>-->
+
+
+<!--  </div>-->
+<!--  <div id="reviews" class="b_e2e2e2 fc_4c4c4c">-->
+<!--    <div class="top_box">-->
+<!--      <div class="div_buttons">-->
+<!--        <a href="javascript:void(0);" id="revcin" class="selected">Recenzje Kinowe</a>-->
+<!--        <a href="javascript:void(0);" id="newfor">Nowe na forum</a>-->
+<!--        <div class="clear"></div>-->
+<!--      </div>-->
+<!--      <div class="clear"></div>-->
+<!--    </div>-->
+<!--    <div class="revcin">-->
+<!--      <div id="cinemareviews" class="accordion">-->
+
+<!--        <div *ngFor="let review of reviews">-->
+<!--          <h3 class="bc_ffffff"><img src="/assets/images/layout/icon_paper_10x10.gif" alt="" title=""-->
+<!--                                     style="padding-right: 6px;"/>Chciwość</h3>-->
+<!--          <div class="bc_ffffff accFirst">-->
+<!--            <div class="col_1">-->
+<!--              <div class="stills stills_0"></div>-->
+<!--              <div class="text">-->
+
+<!--                <strong><a href="/film/950/chciwosc/recenzje/1657/trybiki-w-machinie/"-->
+<!--                           title="Trybiki w machinie">Trybiki w machinie</a></strong><br/>-->
+<!--                Film J.C. Chandora nie wysila się na tłumaczenie schemat&oacute;w trwającego kryzysu, skupiając się-->
+<!--                na...-->
+
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col_2">-->
+<!--              <a href="/film/950/chciwosc/" title="Chciwość"><img class="poster b_e2e2e2"-->
+<!--                                                                  src="http://www.filmy.pl/cache/19138.b2b5c.h69.w48.jpg"-->
+<!--                                                                  alt="Chciwość"-->
+<!--                                                                  title="Chciwość"/></a>-->
+<!--            </div>-->
+<!--            <div class="clear"></div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="newfor" style="display:none;">-->
+<!--      <div id="newforum">-->
+
+<!--        <div class="bc_ffffff" *ngFor="let forumThread of forumThreads">-->
+<!--          <img src="/assets/images/layout/icon_paper_10x10.gif" alt="" title=""-->
+<!--               style="padding-right:6px;"/> <a-->
+<!--          href="/forum/1/film/185/boso-ale-na-rowerze-2009/#p116982">Boso, ale na rowerze-->
+<!--          (2009)</a>-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="clear"></div>-->
+<!--</div>-->
