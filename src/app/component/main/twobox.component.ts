@@ -29,7 +29,7 @@ export class TwoboxComponent implements OnInit {
 
   private collectFilms(): void {
     this.filmService.getTop10()
-      .subscribe(films => this.films = films);
+      .subscribe(filmsList => this.films = filmsList._embedded.filmDTOList);
   }
 
   private collectPersons() {
