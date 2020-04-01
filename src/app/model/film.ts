@@ -8,6 +8,7 @@ export interface Film {
   id: number;
   title: string;
   titleOriginal: string;
+  titleClear: string;
   yearOfProduction: number;
   duration: number;
   genres: Genre[];
@@ -15,4 +16,12 @@ export interface Film {
   premiereDates: Premieredate[];
   distributionInPoland: Distributor[];
   mainSummary: Summary;
+  _links: {
+    self: {
+      href: string
+    },
+    [s: string]: {
+      href: string
+    }
+  };
 }

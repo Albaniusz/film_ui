@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
-import {Film} from "../model/film";
-import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 import {environment} from '../../environments/environment';
+import {Film} from "../model/film";
+import {Filmlist} from "../model/filmlist";
 
 @Injectable()
 export class FilmService {
@@ -16,7 +17,7 @@ export class FilmService {
     return this.http.get<Film>(this.restUrl + "/" + id + "/" + fakeTitle);
   }
 
-  getTop10(): Observable<Film[]> {
-    return this.http.get<Film[]>(this.restUrl + '/top10');
+  getTop10(): Observable<Filmlist> {
+    return this.http.get<Filmlist>(this.restUrl + '/top10');
   }
 }
