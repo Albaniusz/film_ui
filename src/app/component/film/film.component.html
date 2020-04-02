@@ -1,182 +1,58 @@
 <div class="row">
-  <div class="col" style="background-color: #533f03">
+  <div class="col">
 
 
-    <a href="/film/831/dziecinstwo-ikara/#anchorComments" title="Komentarzy (21)">Komentarzy (21)</a>
+    <!--    <a href="/film/831/dziecinstwo-ikara/#anchorComments" title="Komentarzy (21)">Komentarzy (21)</a>-->
     <a title="Zdjęć (0)">Zdjęć (0)</a>
     <a href="/film/831/dziecinstwo-ikara/media/" title="Zwiastuny (1)">Zwiastuny (1)</a>
     <a title="Recenzje (0)">Recenzje (0)</a>
     <a href="/film/831/dziecinstwo-ikara/streszczenia/" title="Streszczenia (1)">Streszczenia (1)</a>
     <a title="Artykuły (0)">Artykuły (0)</a>
 
-
     <div>
+      <img src="/assets/images/layout/defaultPoster_160x230.jpg" alt="{{film.title}}" title="{{film.title}}"/>
+
+      <a href="/film/831/dziecinstwo-ikara/">
+        <h1>{{film.title}}</h1></a>
 
 
-      <a href="http://www.filmy.pl/cache/18846.f8bef.h575.w400.jpg" class="fancybox" title="{{film.title}}"><img
-        src="http://www.filmy.pl/cache/18846.f8bef.h230.w160.jpg" alt="{{film.title}}" title="{{film.title}}"/></a>
-
-
-      <a style="color: #005181 !important; text-decoration: none;" href="/film/831/dziecinstwo-ikara/">
-        <h1 style="font-size: 18px;">{{film.title}}</h1></a>
-
-
-      <ng-container *ngFor="let country of film.countries">{{country.name}}<br/></ng-container>
-
-
+      <ng-container *ngFor="let country of film.countries">{{country.name}}</ng-container>
+      <br>
       {{film.yearOfProduction}}
-
       ({{film.titleOriginal}})
+      <br>
 
 
-      <ng-container *ngIf="film.genres">
-        Gatunek:
-        <span *ngFor="let genre of film.genres">{{genre.name}}<br/></span>
-      </ng-container>
+      Gatunek:
+      <ng-container *ngFor="let genre of film.genres">{{genre.name}},</ng-container>
 
-      Reżyseria:
-      <a href="/osoba/1/francis-ford-coppola/" title="Francis Ford Coppola">Francis Ford Coppola</a>
-
-      Scenariusz:
-      <a href="/osoba/1/francis-ford-coppola/" title="Francis Ford Coppola">Francis Ford Coppola</a></div>
-
+      Reżyseria: <a href="/osoba/1/francis-ford-coppola/" title="Francis Ford Coppola">Francis Ford Coppola</a>
+      Scenariusz: <a href="/osoba/1/francis-ford-coppola/" title="Francis Ford Coppola">Francis Ford Coppola</a></div>
     <a class="c" href="/film/8/dystrykt-9/obsada/">zobacz pełną ekipę &gt;&gt;</a>
 
 
-    <ng-container *ngIf="film.premiereDates">
-      Data premiery:
-      <ng-container *ngFor="let premiereDate of film.premiereDates">
-        {{premiereDate.date|date:'dd.MM.yyyy'}}
-        <ng-container *ngIf="premiereDate.country; else elseBlock">({{premiereDate.country.name}})</ng-container>
-        <ng-template #elseBlock>(Świat)</ng-template>
-      </ng-container>
-    </ng-container>
+    <!--    <ng-container *ngIf="film.premiereDates">-->
+    <!--      Data premiery:-->
+    <!--      <ng-container *ngFor="let premiereDate of film.premiereDates">-->
+    <!--        {{premiereDate.date|date:'dd.MM.yyyy'}}-->
+    <!--        <ng-container *ngIf="premiereDate.country; else elseBlock">({{premiereDate.country.name}})</ng-container>-->
+    <!--        <ng-template #elseBlock>(Świat)</ng-template>-->
+    <!--      </ng-container>-->
+    <!--    </ng-container>-->
 
-    <ng-container *ngIf="film.distributionInPoland">
-      Dystrybutor w Polsce:
-      <ng-container *ngFor="let distributor of film.distributionInPoland">{{distributor.name}},&nbsp;</ng-container>
-    </ng-container>
+    Dystrybutor w Polsce:
+    <ng-container *ngFor="let distributor of film.distributionInPoland">{{distributor.name}},&nbsp;</ng-container>
 
-    <ng-container *ngIf="film.duration">
-      Czas trwania:
-      {{film.duration}} min.
-    </ng-container>
+    Czas trwania:{{film.duration}} min.<br>
+    Streszczenie filmu: {{film.mainSummary.contentAbbreviation}}...&nbsp;
 
-
-    Streszczenie filmu:
-    {{film.mainSummary.contentAbbreviation}}...&nbsp;
-    <a
-      class="c" href="/film/831/dziecinstwo-ikara/streszczenia/1398/opis-dystrybutora/"
-      title="Więcej">Więcej &gt;&gt;</a>
+    <a class="c" href="/film/831/dziecinstwo-ikara/streszczenia/1398/opis-dystrybutora/" title="Więcej">Więcej
+      &gt;&gt;</a>
 
 
   </div>
-  <div class="col-4" style="background-color: #6610f2">
+  <div class="col-4">
     <app-filminfobox></app-filminfobox>
     <app-filmphotobox></app-filmphotobox>
   </div>
 </div>
-
-
-<!--    <div>-->
-<!--      <div class="border b_e2e2e2 bc_ffffff"><a href="http://www.filmy.pl/cache/18846.f8bef.h575.w400.jpg"-->
-<!--                                                class="fancybox" title="{{film.title}}"><img-->
-<!--        src="http://www.filmy.pl/cache/18846.f8bef.h230.w160.jpg" alt="{{film.title}}"-->
-<!--        title="{{film.title}}"/></a></div>-->
-<!--      <div class="about">-->
-<!--        <div>-->
-<!--          <div class="bio">-->
-<!--            <div class="name fc_45a2d7"><a style="color: #005181 !important; text-decoration: none;"-->
-<!--                                           href="/film/831/dziecinstwo-ikara/"><h1-->
-<!--              style="font-size: 18px;">{{film.title}}</h1></a></div>-->
-<!--            <div class="release fc_777777">-->
-<!--              <ng-container *ngFor="let country of film.countries">{{country.name}}<br/></ng-container>-->
-<!--              {{film.yearOfProduction}}</div>-->
-<!--            <div class="name_pl fc_005181">({{film.titleOriginal}})</div>-->
-<!--            <div class="height_20"></div>-->
-<!--          </div>-->
-<!--          <div class="butt">-->
-<!--            <div id="voteLoader" class="ajaxLoader"><img src="/assets/images/ajax-loader.gif" alt="" title=""/></div>-->
-<!--            <div id="voteContainer"></div>-->
-<!--            <br/><br/>-->
-<!--            <div id="favoriteContainer">-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="clear"></div>-->
-
-<!--          <div>-->
-<!--            <ng-container *ngIf="film.genres">-->
-<!--              <div class="label">Gatunek:</div>-->
-<!--              <div class="result">-->
-<!--                <span *ngFor="let genre of film.genres">{{genre.name}}<br/></span>-->
-<!--              </div>-->
-<!--              <div class="clear"></div>-->
-<!--              <div class="height_10"></div>-->
-<!--            </ng-container>-->
-
-<!--            <div class="label">Reżyseria:</div>-->
-<!--            <div class="result"><a href="/osoba/1/francis-ford-coppola/"-->
-<!--                                   title="Francis Ford Coppola">Francis Ford Coppola</a></div>-->
-<!--            <div class="clear"></div>-->
-
-<!--            <div class="label">Scenariusz:</div>-->
-<!--            <div class="result"><a href="/osoba/1/francis-ford-coppola/"-->
-<!--                                   title="Francis Ford Coppola">Francis Ford Coppola</a></div>-->
-<!--            <div class="clear"></div>-->
-
-<!--            <div><a class="c" href="/film/8/dystrykt-9/obsada/">zobacz pełną ekipę &gt;&gt;</a></div>-->
-
-<!--            <ng-container *ngIf="film.premiereDates">-->
-<!--              <div class="height_10"></div>-->
-<!--              <div class="label">Data premiery:</div>-->
-<!--              <div class="result">-->
-<!--                <ng-container *ngFor="let premiereDate of film.premiereDates">-->
-<!--                  {{premiereDate.date|date:'dd.MM.yyyy'}}-->
-<!--                  <ng-container *ngIf="premiereDate.country; else elseBlock">({{premiereDate.country.name}})-->
-<!--                  </ng-container>-->
-<!--                  <ng-template #elseBlock>(Świat)</ng-template>-->
-<!--                  <br/>-->
-<!--                </ng-container>-->
-<!--              </div>-->
-<!--              <div class="clear"></div>-->
-<!--            </ng-container>-->
-
-<!--            <ng-container *ngIf="film.distributionInPoland">-->
-<!--              <div class="height_10"></div>-->
-<!--              <div class="label">Dystrybutor w Polsce:</div>-->
-<!--              <div class="result">-->
-<!--                <ng-container *ngFor="let distributor of film.distributionInPoland">{{distributor.name}},&nbsp;-->
-<!--                </ng-container>-->
-<!--              </div>-->
-<!--              <div class="clear"></div>-->
-<!--            </ng-container>-->
-
-<!--            <ng-container *ngIf="film.duration">-->
-<!--              <div class="height_10"></div>-->
-<!--              <div class="label">Czas trwania:</div>-->
-<!--              <div class="result">{{film.duration}} min.</div>-->
-<!--              <div class="clear"></div>-->
-<!--            </ng-container>-->
-
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="clear"></div>-->
-
-<!--      <div class="desc">-->
-<!--        <div class="label">Streszczenie filmu:</div>-->
-<!--        <div class="clear"></div>-->
-<!--        {{film.mainSummary.contentAbbreviation}}...&nbsp;<a-->
-<!--        class="c" href="/film/831/dziecinstwo-ikara/streszczenia/1398/opis-dystrybutora/"-->
-<!--        title="Więcej">Więcej &gt;&gt;</a>-->
-<!--      </div>-->
-
-<!--      <div class="height_10"></div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-<!--<div id="right" class="left">-->
-
-<!--</div>-->
-<!--<div class="clear"></div>-->
