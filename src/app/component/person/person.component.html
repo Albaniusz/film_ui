@@ -1,120 +1,39 @@
-<div id="left" class="left">
-  <script type="text/javascript" language="javascript"
-          src="http://www.filmy.pl/plugins/starRating/jquery.MetaData.js"></script>
-  <script type="text/javascript" language="javascript"
-          src="http://www.filmy.pl/plugins/starRating/jquery.rating.pack.js"></script>
-  <link type="text/css" rel="stylesheet" href="http://www.filmy.pl/plugins/starRating/jquery.rating.css"/>
-
-  <script type="text/javascript" language="javascript" src="http://www.filmy.pl/javascript/ajax/vote.js"></script>
-
-  <script type="text/javascript">
-    var itemID = 1;
-    var voteType = "person";
-
-    $(document).ready(function () {
-      $('a.fancybox').fancybox();
-    });
-
-  </script>
-
-  <div id="actor_box" class="b_e2e2e2 fc_777777">
-    <div class="top_box">
-      <div class="div_buttons">
-        <a title="Biografie">Biografie (0)</a>
-        <a title="Biografie">Artykuły (0)</a>
-        <a title="Biografie">Newsy (0)</a>
-        <a title="Zdjęcia">Zdjęcia (0)</a>
-
-
-        <div class="clear"></div>
-      </div>
-      <div class="clear"></div>
-    </div>
+<div class="row">
+  <div class="col" style="background-color: #533f03">
 
     <div>
-      <div class="border b_e2e2e2 bc_ffffff">
-        <a href="http://www.filmy.pl/cache/8.535ae.h575.w400.jpg" class="fancybox" title="{{person.name}}"><img
-          src="http://www.filmy.pl/cache/8.535ae.h230.w160.jpg" alt="{{person.name}}"
-          title="{{person.name}}"/></a>
-      </div>
-      <div class="about">
-        <div>
-          <div class="bio">
-            <div class="name fc_45a2d7"><a style="color: #005181 !important; text-decoration: none;"
-                                           href="http://www.filmy.pl/osoba/1/francis-ford-coppola/"><h1
-              style="font-size: 18px;">{{person.name}}</h1></a></div>
-            <div>
-
-              <ng-container *ngIf="person.birthDate">
-                <div class="label">Data urodzenia:</div>
-                <div class="result">{{person.birthDate|date:'dd.MM.yyyy'}}</div>
-                <div class="clear"></div>
-              </ng-container>
-
-              <ng-container *ngIf="person.birthPlace"></ng-container>
-              <div class="label">Miejsce urodzenia:</div>
-              <div class="result">{{person.birthPlace}}
-                <ng-container *ngIf="person.birthCountry">, {{person.birthCountry.name}}</ng-container>
-              </div>
-              <div class="clear"></div>
-
-              <div class="label">Zawód:</div>
-              <div class="result">Reżyser,&nbsp;Scenarzysta</div>
-              <div class="clear"></div>
-            </div>
-          </div>
-          <div class="butt">
-            <div id="voteLoader" class="ajaxLoader"><img src="/assets/images/ajax-loader.gif" alt=""
-                                                         title=""/></div>
-            <div id="voteContainer"></div>
-            <br/><br/>
-            <div id="favoriteContainer">
-            </div>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="height_10"></div>
-      </div>
-      <div class="clear"></div>
+      <a title="Biografie">Biografie (0)</a>
+      <a title="Biografie">Artykuły (0)</a>
+      <a title="Biografie">Newsy (0)</a>
+      <a title="Zdjęcia">Zdjęcia (0)</a>
     </div>
+
+    <img src="/assets/images/layout/defaultPerson_160x230.jpg" alt="{{person.name}}" title="{{person.name}}"/>
+
+    <a [routerLink]="['/osoba', person.id, person.nameClear]"><h1>{{person.name}}</h1></a>
+
+    Data urodzenia: {{person.birthDate}}<br>
+
+    Miejsce urodzenia: {{person.birthPlace}}
+    <ng-container *ngIf="person.birthCountry">, {{person.birthCountry.name}}</ng-container>
+    <br>
+
+    Zawód: Reżyser,&nbsp;Scenarzysta<br>
+
+    <app-filmography></app-filmography>
+
+
   </div>
+  <div class="col-4" style="background-color: #6610f2">
+    <h2>Informacje: {{person.name}} </h2>
 
-  <app-filmography></app-filmography>
-</div>
+    <img src="/assets/images/layout/icon_dot_menu_10x10.png"/>
+    <a [routerLink]="['/osoba', person.id, person.nameClear]"
+       title="Strona o osobie">Strona o osobie</a><br>
+    <img src="/assets/images/layout/icon_dot_menu_10x10.png"/>Biografie (0)<br>
+    <img src="/assets/images/layout/icon_dot_menu_10x10.png"/>Artykuły (0)<br>
+    <img src="/assets/images/layout/icon_dot_menu_10x10.png"/>Newsy (0)<br>
+    <img src="/assets/images/layout/icon_dot_menu_10x10.png"/>Zdjęcia (0)<br>
 
-
-<div id="right" class="left">
-  <div id="film_box_m" class="b_e2e2e2 fc_777777">
-    <div class="top_box fc_4c4c4c">
-      <div class="div_title"><h2 style="font-size: 14px;">Informacje: Francis Ford Coppola</h2></div>
-      <div class="clear"></div>
-    </div>
-    <div>
-      <div class="height_10"></div>
-      <ul>
-        <li>
-          <img class="test" src="http://www.filmy.pl/images/layout/icon_dot_menu_10x10.png" alt="" title=""/>
-          <a href="http://www.filmy.pl/osoba/1/francis-ford-coppola/" title="Strona o osobie"> Strona o osobie
-          </a></li>
-        <li>
-          <img class="test" src="http://www.filmy.pl/images/layout/icon_dot_menu_10x10.png" alt="" title=""/>
-          Biografie (0)
-        </li>
-        <li>
-          <img class="test" src="http://www.filmy.pl/images/layout/icon_dot_menu_10x10.png" alt="" title=""/>
-          Artykuły (0)
-        </li>
-        <li>
-          <img class="test" src="http://www.filmy.pl/images/layout/icon_dot_menu_10x10.png" alt="" title=""/>
-          Newsy (0)
-        </li>
-        <li>
-          <img class="test" src="http://www.filmy.pl/images/layout/icon_dot_menu_10x10.png" alt="" title=""/>
-          Zdjęcia (0)
-        </li>
-      </ul>
-      <div class="height_10"></div>
-    </div>
   </div>
 </div>
-<div class="clear"></div>
