@@ -6,8 +6,11 @@ import {AppRoutingModule} from './app-routing.module';
 
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import {MatSliderModule} from "@angular/material/slider";
 import {MatExpansionModule} from "@angular/material/expansion";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatTableModule} from "@angular/material/table";
 
 import {HeaderComponent} from './component/pagestruct/header.component';
 import {MenuComponent} from './component/pagestruct/menu.component';
@@ -41,6 +44,8 @@ import {TwoboxComponent} from "./component/main/twobox.component";
 import {FilminfoboxComponent} from "./component/film/filminfobox.component";
 import {FilmphotoboxComponent} from "./component/film/filmphotobox.component";
 import {FilmographyComponent} from "./component/person/filmography.component";
+import {FilmlistComponent} from "./component/film/filmlist.component";
+import {PersonlistComponent} from "./component/person/personlist.component";
 
 @NgModule({
   declarations: [
@@ -62,7 +67,9 @@ import {FilmographyComponent} from "./component/person/filmography.component";
     RegulationsComponent,
     PrivacypolicyComponent,
     FilmComponent,
+    FilmlistComponent,
     PersonComponent,
+    PersonlistComponent,
     FilmographyComponent,
     EnemefComponent,
     NewsletterboxComponent,
@@ -73,14 +80,16 @@ import {FilmographyComponent} from "./component/person/filmography.component";
     FilminfoboxComponent,
     FilmphotoboxComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatSliderModule,
-    MatExpansionModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatSliderModule,
+        MatExpansionModule,
+        MatTabsModule,
+        MatTableModule,
+    ],
   providers: [
     FilmService,
     PersonService,

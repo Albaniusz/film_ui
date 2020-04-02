@@ -17,6 +17,10 @@ export class FilmService {
     return this.http.get<Film>(this.restUrl + "/" + id + "/" + fakeTitle);
   }
 
+  getList(): Observable<Filmlist> {
+    return this.http.get<Filmlist>(this.restUrl + '/list');
+  }
+
   getTop10(): Observable<Filmlist> {
     return this.http.get<Filmlist>(this.restUrl + '/top10');
   }

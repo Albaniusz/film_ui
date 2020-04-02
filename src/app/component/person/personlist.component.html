@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col f_content">
+
+    <h1>Lista osób</h1>
+
+    <ng-container *ngFor="let person of persons">
+      <div class="row">
+        <div class="col-1">
+          <a [routerLink]="['/osoba', person.id, person.nameClear]" title="{{person.name}}"><img
+            src="/assets/images/layout/defaultPerson_48x69.jpg" alt="{{person.name}}" title="{{person.name}}"/></a>
+        </div>
+        <div class="col-sm">
+          <a [routerLink]="['/osoba', person.id, person.nameClear]" title="{{person.name}}">{{person.name}}</a>
+          <div>*****</div>
+          <div class="row">
+            <div class="col">Data urodzenia: {{person.birthDate}}</div>
+            <div class="col">Miejsce urodzenia: {{person.birthPlace}}, {{person.birthCountry.name}}</div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+  <div class="col-4">
+    <app-newsbox></app-newsbox>
+    <app-previewbox></app-previewbox>
+  </div>
+</div>

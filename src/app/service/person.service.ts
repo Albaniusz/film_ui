@@ -3,6 +3,7 @@ import {Person} from "../model/person";
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
+import {Personlist} from "../model/Personlist";
 
 @Injectable()
 export class PersonService {
@@ -16,7 +17,11 @@ export class PersonService {
     return this.http.get<Person>(this.restUrl + "/" + id + "/" + fakeName);
   }
 
-  getTop10(): Observable<Person[]> {
-    return this.http.get<Person[]>(this.restUrl + '/top10');
+  getList(): Observable<Personlist> {
+    return this.http.get<Personlist>(this.restUrl + '/list');
+  }
+
+  getTop10(): Observable<Personlist> {
+    return this.http.get<Personlist>(this.restUrl + '/top10');
   }
 }

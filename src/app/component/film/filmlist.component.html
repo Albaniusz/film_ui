@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col f_content">
+
+    <h1>Lista filmów</h1>
+
+    <ng-container *ngFor="let film of films">
+      <div class="row">
+        <div class="col-1">
+          <a [routerLink]="['/film', film.id, film.titleClear]" title="{{film.title}}"><img
+            src="/assets/images/layout/defaultPoster_48x69.jpg" alt="{{film.title}}" title="{{film.title}}"/></a>
+        </div>
+        <div class="col-sm">
+          <div>
+            <a [routerLink]="['/film', film.id, film.titleClear]" title="{{film.title}}">{{film.title}}
+              ({{film.yearOfProduction}}) - {{film.titleOriginal}}</a>
+          </div>
+          <div>*****</div>
+          <div class="row">
+            <div class="col">Premiera:</div>
+            <div class="col">Gatunek:
+              <ng-container *ngFor="let genre of film.genres">{{genre.name}},</ng-container>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">Premiera świat:</div>
+            <div class="col">Kraj:
+              <ng-container *ngFor="let country of film.countries">{{country.name}},</ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+  <div class="col-4">
+    <app-newsbox></app-newsbox>
+    <app-previewbox></app-previewbox>
+  </div>
+</div>

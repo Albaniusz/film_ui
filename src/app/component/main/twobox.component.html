@@ -5,27 +5,27 @@
         <mat-expansion-panel-header>Filmy</mat-expansion-panel-header>
 
         <mat-accordion displayMode="flat" hideToggle>
-          <ng-container *ngFor="let film of films">
-            <mat-expansion-panel>
-              <mat-expansion-panel-header><span class="bc_ffffff font-weight-bold">{{film.title}}</span></mat-expansion-panel-header>
-              <div class="row">
-                <div class="col-sm">
-                  <div class="stills stills_5" title="Średnia 5.00, przy ilości głosów 1"></div>
-                  <p>Gatunek:
-                  <ng-container *ngFor="let genre of film.genres">{{genre.name}},</ng-container></p>
-                  <p>Produkcja:
-                  <ng-container *ngFor="let country of film.countries">{{country.name}},</ng-container></p>
-<!--                  <p><a href="{{film.id}}/dziecinstwo-ikara/media/" title="Zobacz zwiastun">Zobacz zwiastun</a></p>-->
-                </div>
-                <div class="col-3">
-                  <!--                      href="{{film._links.self.href}}" -->
-                  <a [routerLink]="['/film', film.id, film.titleClear]" title="{{film.title}}"><img
-                    class="poster b_e2e2e2" src="/assets/images/layout/defaultPoster_48x69.jpg" alt="{{film.title}}"
-                    title="{{film.title}}"/></a>
-                </div>
+          <mat-expansion-panel *ngFor="let film of films">
+            <mat-expansion-panel-header><span class="bc_ffffff font-weight-bold">{{film.title}}</span>
+            </mat-expansion-panel-header>
+            <div class="row">
+              <div class="col-sm">
+                <div class="stills stills_5" title="Średnia 5.00, przy ilości głosów 1"></div>
+                <p>Gatunek:
+                  <ng-container *ngFor="let genre of film.genres">{{genre.name}},</ng-container>
+                </p>
+                <p>Produkcja:
+                  <ng-container *ngFor="let country of film.countries">{{country.name}},</ng-container>
+                </p>
+                <!--                  <p><a href="{{film.id}}/dziecinstwo-ikara/media/" title="Zobacz zwiastun">Zobacz zwiastun</a></p>-->
               </div>
-            </mat-expansion-panel>
-          </ng-container>
+              <div class="col-3">
+                <a [routerLink]="['/film', film.id, film.titleClear]" title="{{film.title}}"><img
+                  class="poster b_e2e2e2" src="/assets/images/layout/defaultPoster_48x69.jpg" alt="{{film.title}}"
+                  title="{{film.title}}"/></a>
+              </div>
+            </div>
+          </mat-expansion-panel>
         </mat-accordion>
 
       </mat-expansion-panel>
@@ -34,14 +34,17 @@
         <mat-expansion-panel-header>Osoby</mat-expansion-panel-header>
 
         <mat-accordion displayMode="flat" hideToggle>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>Person 1</mat-expansion-panel-header>
-          </mat-expansion-panel>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>Person 2</mat-expansion-panel-header>
-          </mat-expansion-panel>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>Person 3</mat-expansion-panel-header>
+          <mat-expansion-panel *ngFor="let person of persons">
+            <mat-expansion-panel-header><span class="bc_ffffff font-weight-bold">{{person.name}}</span>
+            </mat-expansion-panel-header>
+            <div class="row">
+              <div class="col-sm">*****</div>
+              <div class="col-3">
+                <a [routerLink]="['/osoba', person.id, person.nameClear]" title="{{person.name}}"><img
+                  src="/assets/images/layout/defaultPerson_48x69.jpg" alt="{{person.name}}"
+                  title="{{person.name}}"/></a>
+              </div>
+            </div>
           </mat-expansion-panel>
         </mat-accordion>
 
