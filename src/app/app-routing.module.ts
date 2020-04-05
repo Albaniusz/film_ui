@@ -11,6 +11,7 @@ import {FilmComponent} from "./component/film/film.component";
 import {PersonComponent} from "./component/person/person.component";
 import {FilmlistComponent} from "./component/film/filmlist.component";
 import {PersonlistComponent} from "./component/person/personlist.component";
+import {FilmlistgenreComponent} from "./component/film/filmlistgenre.component";
 
 const routes: Routes = [
   // main page
@@ -25,6 +26,7 @@ const routes: Routes = [
   // film
   {path: 'film/:id/:fakeTitle', component: FilmComponent},
   {path: 'katalog/filmy', component: FilmlistComponent},
+  {path: 'katalog/filmy/gatunek/:id/:fakeName', component: FilmlistgenreComponent},
   // person
   {path: 'osoba/:id/:fakeName', component: PersonComponent},
   {path: 'katalog/ludzie', component: PersonlistComponent},

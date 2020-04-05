@@ -13,12 +13,16 @@ export class FilmService {
     this.restUrl = environment.service.url + '/film';
   }
 
-  getFilm(id: number, fakeTitle: string): Observable<Film> {
-    return this.http.get<Film>(this.restUrl + "/" + id + "/" + fakeTitle);
+  getFilm(id: number): Observable<Film> {
+    return this.http.get<Film>(this.restUrl + "/" + id);
   }
 
   getList(): Observable<Filmlist> {
     return this.http.get<Filmlist>(this.restUrl + '/list');
+  }
+
+  getListByGenre(): Observable<Filmlist> {
+    return this.http.get<Filmlist>(this.restUrl + '/list/genre');
   }
 
   getTop10(): Observable<Filmlist> {

@@ -9,46 +9,78 @@
     <a href="/film/831/dziecinstwo-ikara/streszczenia/" title="Streszczenia (1)">Streszczenia (1)</a>
     <a title="Artykuły (0)">Artykuły (0)</a>
 
-    <div>
-      <img src="/assets/images/layout/defaultPoster_160x230.jpg" alt="{{film.title}}" title="{{film.title}}"/>
 
-      <a href="/film/831/dziecinstwo-ikara/">
-        <h1>{{film.title}}</h1></a>
+    <div class="row">
+      <div class="col-3">
+        <img src="/assets/images/layout/defaultPoster_160x230.jpg" [alt]="film.title" [title]="film.title"/>
+      </div>
+      <div class="col-sm">
+        <a [routerLink]="['/film', film.id, film.titleClear]" title="{{film.title}}"><h1>{{film.title}}</h1></a>
+
+        <div class="row">
+          <ng-container *ngFor="let country of film.countries">{{country.name}}</ng-container>
+          {{film.yearOfProduction}}
+        </div>
+
+        <div class="row">
+          ({{film.titleOriginal}})
+        </div>
+
+        <div class="row">
+          Gatunek:
+          <ng-container *ngFor="let genre of film.genres">{{genre.name}},</ng-container>
+        </div>
+
+        <div class="row">
+          Reżyseria:
+          <ng-container *ngFor="let director of film.directors"><a
+            [routerLink]="['/osoba', director.id, director.nameClear]" title="{{director.name}}">{{director.name}}</a>,
+          </ng-container>
+        </div>
+
+        <div class="row">
+          Scenariusz:
+          <ng-container *ngFor="let writer of film.writers"><a [routerLink]="['/osoba', writer.id, writer.nameClear]"
+                                                               title="{{writer.name}}">{{writer.name}}</a>,
+          </ng-container>
+        </div>
+
+        <div class="row">
+          <a [routerLink]="['/film', film.id, film.titleClear, 'obsada']" title="zobacz pełną ekipę">zobacz pełną ekipę
+            &gt;&gt;</a>
+        </div>
 
 
-      <ng-container *ngFor="let country of film.countries">{{country.name}}</ng-container>
-      <br>
-      {{film.yearOfProduction}}
-      ({{film.titleOriginal}})
-      <br>
+        <!--    <ng-container *ngIf="film.premiereDates">-->
+        <!--      Data premiery:-->
+        <!--      <ng-container *ngFor="let premiereDate of film.premiereDates">-->
+        <!--        {{premiereDate.date|date:'dd.MM.yyyy'}}-->
+        <!--        <ng-container *ngIf="premiereDate.country; else elseBlock">({{premiereDate.country.name}})</ng-container>-->
+        <!--        <ng-template #elseBlock>(Świat)</ng-template>-->
+        <!--      </ng-container>-->
+        <!--    </ng-container>-->
 
+        <div class="row">
+          Dystrybutor w Polsce:
+          <ng-container *ngFor="let distributor of film.distributionInPoland">{{distributor.name}},&nbsp;</ng-container>
+        </div>
 
-      Gatunek:
-      <ng-container *ngFor="let genre of film.genres">{{genre.name}},</ng-container>
+        <div class="row">
+          Czas trwania:{{film.duration}} min.
+        </div>
+      </div>
+      <div class="col-2">
+        *****
+      </div>
+    </div>
 
-      Reżyseria: <a href="/osoba/1/francis-ford-coppola/" title="Francis Ford Coppola">Francis Ford Coppola</a>
-      Scenariusz: <a href="/osoba/1/francis-ford-coppola/" title="Francis Ford Coppola">Francis Ford Coppola</a></div>
-    <a class="c" href="/film/8/dystrykt-9/obsada/">zobacz pełną ekipę &gt;&gt;</a>
+    Streszczenie
 
+    <!--    Streszczenie filmu: {{film.mainSummary.contentAbbreviation}}...&nbsp;-->
 
-    <!--    <ng-container *ngIf="film.premiereDates">-->
-    <!--      Data premiery:-->
-    <!--      <ng-container *ngFor="let premiereDate of film.premiereDates">-->
-    <!--        {{premiereDate.date|date:'dd.MM.yyyy'}}-->
-    <!--        <ng-container *ngIf="premiereDate.country; else elseBlock">({{premiereDate.country.name}})</ng-container>-->
-    <!--        <ng-template #elseBlock>(Świat)</ng-template>-->
-    <!--      </ng-container>-->
-    <!--    </ng-container>-->
-
-    Dystrybutor w Polsce:
-    <ng-container *ngFor="let distributor of film.distributionInPoland">{{distributor.name}},&nbsp;</ng-container>
-
-    Czas trwania:{{film.duration}} min.<br>
-    Streszczenie filmu: {{film.mainSummary.contentAbbreviation}}...&nbsp;
-
-    <a class="c" href="/film/831/dziecinstwo-ikara/streszczenia/1398/opis-dystrybutora/" title="Więcej">Więcej
-      &gt;&gt;</a>
-
+    <!--      <a [routerLink]="['/film', film.id, film.titleClear, 'streszczenia']" title="zobacz pełną ekipę">zobacz pełną ekipę-->
+    <!--      <a class="c" href="/film/831/dziecinstwo-ikara/streszczenia/1398/opis-dystrybutora/" title="Więcej">Więcej-->
+    <!--        &gt;&gt;</a>-->
 
   </div>
   <div class="col-4">

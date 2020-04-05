@@ -46,6 +46,7 @@ import {FilmphotoboxComponent} from "./component/film/filmphotobox.component";
 import {FilmographyComponent} from "./component/person/filmography.component";
 import {FilmlistComponent} from "./component/film/filmlist.component";
 import {PersonlistComponent} from "./component/person/personlist.component";
+import {FilmlistgenreComponent} from "./component/film/filmlistgenre.component";
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import {PersonlistComponent} from "./component/person/personlist.component";
     PrivacypolicyComponent,
     FilmComponent,
     FilmlistComponent,
+    FilmlistgenreComponent,
     PersonComponent,
     PersonlistComponent,
     FilmographyComponent,

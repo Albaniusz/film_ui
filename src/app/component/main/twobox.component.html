@@ -12,7 +12,9 @@
               <div class="col-sm">
                 <div class="stills stills_5" title="Średnia 5.00, przy ilości głosów 1"></div>
                 <p>Gatunek:
-                  <ng-container *ngFor="let genre of film.genres">{{genre.name}},</ng-container>
+                  <ng-container *ngFor="let genre of film.genres">
+                    <a [routerLink]="['katalog/filmy/gatunek/', genre.id, genre.nameClear]" title="{{genre.name}}">{{genre.name}}</a>,
+                  </ng-container>
                 </p>
                 <p>Produkcja:
                   <ng-container *ngFor="let country of film.countries">{{country.name}},</ng-container>

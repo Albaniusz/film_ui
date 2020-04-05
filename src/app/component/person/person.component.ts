@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Person} from "../../model/person";
 import {ActivatedRoute} from "@angular/router";
 import {PersonService} from "../../service/person.service";
+import {Person} from "../../model/person";
 
 @Component({
   selector: 'app-person',
@@ -10,7 +10,6 @@ import {PersonService} from "../../service/person.service";
 export class PersonComponent implements OnInit {
   person: Person;
   id: number;
-  fakeName: string;
 
   constructor(
     private personService: PersonService,
@@ -18,7 +17,6 @@ export class PersonComponent implements OnInit {
   ) {
     this.route.params.subscribe(params => {
       this.id = params['id'];
-      this.fakeName = params['fakeName']
     });
   }
 
@@ -27,6 +25,6 @@ export class PersonComponent implements OnInit {
   }
 
   collectPerson() {
-    this.personService.getPerson(this.id, this.fakeName).subscribe(person => this.person = person);
+    this.personService.getPerson(this.id).subscribe(person => this.person = person);
   }
 }

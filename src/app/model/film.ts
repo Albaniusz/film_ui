@@ -3,6 +3,7 @@ import {Country} from "./country";
 import {Summary} from "./summary";
 import {Premieredate} from "./premieredate";
 import {Distributor} from "./distributor";
+import {Person} from "./person";
 
 export interface Film {
   id: number;
@@ -16,6 +17,8 @@ export interface Film {
   premiereDates: Premieredate[];
   distributionInPoland: Distributor[];
   mainSummary: Summary;
+  directors: Person[];
+  writers: Person[];
   _links: {
     self: {
       href: string
