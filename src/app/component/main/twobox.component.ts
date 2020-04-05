@@ -13,8 +13,8 @@ import {Thread} from "../../model/thread";
 export class TwoboxComponent implements OnInit {
   films: Film[];
   persons: Person[];
-  reviews: Review[];
-  forumThreads: Thread[];
+  reviews: Review[];//TODO
+  forumThreads: Thread[];//TODO
 
   constructor(
     private filmService: FilmService,
@@ -24,7 +24,7 @@ export class TwoboxComponent implements OnInit {
 
   ngOnInit() {
     this.collectFilms();
-    // this.collectPersons();
+    this.collectPersons();
   }
 
   private collectFilms(): void {
@@ -34,6 +34,6 @@ export class TwoboxComponent implements OnInit {
 
   private collectPersons() {
     this.personService.getTop10()
-      .subscribe(persons => this.persons = persons);
+      .subscribe(personsList => this.persons = personsList._embedded.personDTOList);
   }
 }

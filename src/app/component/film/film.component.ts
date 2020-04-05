@@ -10,7 +10,6 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class FilmComponent implements OnInit {
   film: Film;
   id: number;
-  fakeTitle: string;
 
   constructor(
     private filmService: FilmService,
@@ -18,7 +17,6 @@ export class FilmComponent implements OnInit {
   ) {
     this.route.params.subscribe(params => {
       this.id = params['id'];
-      this.fakeTitle = params['fakeTitle']
     });
   }
 
@@ -27,7 +25,7 @@ export class FilmComponent implements OnInit {
   }
 
   collectFilm() {
-    this.filmService.getFilm(this.id, this.fakeTitle)
+    this.filmService.getFilm(this.id)
       .subscribe(film => this.film = film);
   }
 }
