@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col">
+    <app-filmheader></app-filmheader>
+
+    <div class="row">
+      <div class="col">
+        <h1>LISTA OBSADA</h1>
+
+        <ng-container *ngFor="let castElement of filmCast">
+          <ng-container *ngIf="castElement.items.length > 0">
+            <strong>{{castElement.name}}</strong>
+            <ul *ngFor="let role of castElement.items">
+              <li>
+                <a [routerLink]="['/osoba', role.person.id, role.person.nameClear]" title="{{role.person.name}}"><img
+                  src="/assets/images/layout/defaultPerson_48x69.jpg" alt="{{role.person.name}}"
+                  title="{{role.person.name}}"/></a>
+                <a [routerLink]="['/osoba', role.person.id, role.person.nameClear]"
+                   title="{{role.person.name}}">{{role.person.name}}</a>
+                <ng-container *ngIf="role.title"> - {{role.title}}</ng-container>
+              </li>
+            </ul>
+          </ng-container>
+        </ng-container>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="col-4">
+    <app-filminfobox></app-filminfobox>
+    <app-filmphotobox></app-filmphotobox>
+  </div>
+</div>

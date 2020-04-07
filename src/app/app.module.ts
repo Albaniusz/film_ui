@@ -47,6 +47,8 @@ import {FilmographyComponent} from "./component/person/filmography.component";
 import {FilmlistComponent} from "./component/film/filmlist.component";
 import {PersonlistComponent} from "./component/person/personlist.component";
 import {FilmlistgenreComponent} from "./component/film/filmlistgenre.component";
+import {FilmcastComponent} from "./component/film/filmcast.component";
+import {FilmheaderComponent} from "./component/film/filmheader.component";
 
 @NgModule({
   declarations: [
@@ -70,6 +72,8 @@ import {FilmlistgenreComponent} from "./component/film/filmlistgenre.component";
     FilmComponent,
     FilmlistComponent,
     FilmlistgenreComponent,
+    FilmcastComponent,
+    FilmheaderComponent,
     PersonComponent,
     PersonlistComponent,
     FilmographyComponent,
