@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Filmographyelement} from "../../model/filmographyelement";
+import {Filmcastelement} from "../../model/filmcastelement";
 import {PersonService} from "../../service/person.service";
 import {ActivatedRoute} from "@angular/router";
 
@@ -8,7 +8,7 @@ import {ActivatedRoute} from "@angular/router";
   templateUrl: './filmography.component.html',
 })
 export class FilmographyComponent implements OnInit {
-  filmography: Filmographyelement[];
+  filmography: Filmcastelement[];
   id: number;
 
   constructor(
@@ -25,6 +25,6 @@ export class FilmographyComponent implements OnInit {
   }
 
   collectFilmography() {
-    this.personService.getFilmography(this.id).subscribe(filmography => this.filmography = filmography._embedded.filmographyDTOList);
+    this.personService.getFilmography(this.id).subscribe(filmography => this.filmography = filmography._embedded.filmCastDTOList);
   }
 }

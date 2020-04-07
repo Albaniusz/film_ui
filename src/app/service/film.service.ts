@@ -4,6 +4,7 @@ import {Observable} from "rxjs";
 import {environment} from '../../environments/environment';
 import {Film} from "../model/film";
 import {Filmlist} from "../model/filmlist";
+import {Filmcast} from "../model/filmcast";
 
 @Injectable()
 export class FilmService {
@@ -15,6 +16,14 @@ export class FilmService {
 
   getFilm(id: number): Observable<Film> {
     return this.http.get<Film>(this.restUrl + "/" + id);
+  }
+
+  getFilmHeader(id: number): Observable<Film> {
+    return this.http.get<Film>(this.restUrl + "/" + id + '/header');
+  }
+
+  getFullCast(id: number): Observable<Filmcast> {
+    return this.http.get<Filmcast>(this.restUrl + "/" + id + "/fullcast");
   }
 
   getList(): Observable<Filmlist> {

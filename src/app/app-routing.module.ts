@@ -12,6 +12,7 @@ import {PersonComponent} from "./component/person/person.component";
 import {FilmlistComponent} from "./component/film/filmlist.component";
 import {PersonlistComponent} from "./component/person/personlist.component";
 import {FilmlistgenreComponent} from "./component/film/filmlistgenre.component";
+import {FilmcastComponent} from "./component/film/filmcast.component";
 
 const routes: Routes = [
   // main page
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'politykaprywatnosci', component: PrivacypolicyComponent},
   // film
   {path: 'film/:id/:fakeTitle', component: FilmComponent},
+  {path: 'film/:id/:fakeTitle/obsada', component: FilmcastComponent},
   {path: 'katalog/filmy', component: FilmlistComponent},
   {path: 'katalog/filmy/gatunek/:id/:fakeName', component: FilmlistgenreComponent},
   // person

@@ -1,6 +1,6 @@
 import {Filmrole} from "./filmrole";
 
-export interface Filmographyelement {
+export interface Filmcastelement {
   name: string;
   items: Filmrole[];
 }
