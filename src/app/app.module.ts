@@ -49,6 +49,8 @@ import {PersonlistComponent} from "./component/person/personlist.component";
 import {FilmlistgenreComponent} from "./component/film/filmlistgenre.component";
 import {FilmcastComponent} from "./component/film/filmcast.component";
 import {FilmheaderComponent} from "./component/film/filmheader.component";
+import {CountryService} from "./service/country.service";
+import {GenreService} from "./service/genre.service";
 
 @NgModule({
   declarations: [
@@ -97,9 +99,11 @@ import {FilmheaderComponent} from "./component/film/filmheader.component";
         MatTableModule,
     ],
   providers: [
+    CountryService,
     FilmService,
-    PersonService,
+    GenreService,
     NewsService,
+    PersonService,
   ],
   bootstrap: [
     AppComponent,
